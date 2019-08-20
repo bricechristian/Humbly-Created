@@ -1,14 +1,17 @@
 import React from 'react'
-import { graphql } from 'gatsby'
+import { Link, graphql } from 'gatsby'
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
+import styles from './blog.module.css'
 import Layout from '../components/layout'
 import ArticlePreview from '../components/article-preview'
 
-class RootIndex extends React.Component {
+class WeddingIndex extends React.Component {
   render() {
-    const siteTitle = get(this.props, 'data.site.siteMetadata.title')
-    const posts = get(this.props, 'data.allContentfulWedding.edges')
+    const siteTitle = get(this, 'props.data.site.siteMetadata.title')
+    const posts = get(this, 'props.data.allContentfulWedding.edges')
+    // const arr = posts.map(item => <div key={item.slug}>{item.title}</div>)
+    // console.log(arr)
 
     function getUnique(arr, comp) {
       //store the comparison  values in array
@@ -29,38 +32,32 @@ class RootIndex extends React.Component {
     }))
 
     const uniqueArr = getUnique(arr, 'title')
-    // console.log(uniqueArr)
 
     return (
       <Layout location={this.props.location}>
-        <div style={{ background: '#fff' }}>
-          <Helmet title={siteTitle} />
-          <div className="wrapper">
-            <h1 className="section-headline">Humbly Created Co.</h1>
-            <h2>
-              I’m Brice. I’m a web-developer and videographer with a love for
-              all things creative based out of Charleston, South Carolina.
-            </h2>
-            <ul className="article-list">
-              {uniqueArr.map(item => {
-                return (
-                  <li key={item.slug}>
-                    <a href={`wedding/${item.slug}`}>{item.title}</a>
-                  </li>
-                )
-              })}
-            </ul>
-          </div>
+        <Helmet title={siteTitle} />
+        <div className={styles.hero}>Weddings</div>
+        <div className="wrapper">
+          <h2 className="section-headline">Recent weddings</h2>
+          <ul className="article-list">
+            {uniqueArr.map(node => {
+              return (
+                <li key={node.slug}>
+                  <a href={`wedding/${node.slug}`}>{node.title}</a>
+                </li>
+              )
+            })}
+          </ul>
         </div>
       </Layout>
     )
   }
 }
 
-export default RootIndex
+export default WeddingIndex
 
 export const pageQuery = graphql`
-  query HomeQuery {
+  query WeddingIndexQuery {
     site {
       siteMetadata {
         title
