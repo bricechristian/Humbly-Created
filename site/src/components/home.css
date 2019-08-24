@@ -1,0 +1,26 @@
+.section.hero {
+    height: 100vh;
+    min-height: 500px;
+    position: relative;
+}
+
+.section.hero h2 {
+    font-size: 60px;
+}
+
+.wedding-menu {
+    position: absolute;
+    left: calc(-50% + 50px);
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg) translate(50%, 0%);
+    bottom: 0;
+    width: 100%;
+}
+
+.wedding-menu .wrapper {
+    max-width: 100%;
+}
+
+.wedding-menu ul {
+    list-style: none;
+}

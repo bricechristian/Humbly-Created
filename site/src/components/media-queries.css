@@ -1,0 +1,5 @@
+@media screen and (max-width: 1400px) {
+    .section.hero h2 {
+        font-size: 4vw;
+    }
+}

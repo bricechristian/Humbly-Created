@@ -3,7 +3,8 @@ import { graphql } from 'gatsby'
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
 import Layout from '../components/layout'
-import ArticlePreview from '../components/article-preview'
+import '../components/home.css'
+import '../components/media-queries.css'
 
 class RootIndex extends React.Component {
   render() {
@@ -33,23 +34,27 @@ class RootIndex extends React.Component {
 
     return (
       <Layout location={this.props.location}>
-        <div style={{ background: '#fff' }}>
+        <div className={`section hero flex align-center pink-bg`}>
           <Helmet title={siteTitle} />
-          <div className="wrapper">
-            <h1 className="section-headline">Humbly Created Co.</h1>
-            <h2>
+          <div className={`wrapper md center-text`}>
+            {/* <h1 className="section-headline">Humbly Created Co.</h1> */}
+            <h2 className={`blue-color`}>
               I’m Brice. I’m a web-developer and videographer with a love for
               all things creative based out of Charleston, South Carolina.
             </h2>
-            <ul className="article-list">
-              {uniqueArr.map(item => {
-                return (
-                  <li key={item.slug}>
-                    <a href={`wedding/${item.slug}`}>{item.title}</a>
-                  </li>
-                )
-              })}
-            </ul>
+          </div>
+          <div className={`wedding-menu`}>
+            <div className="wrapper">
+              <ul className="flex">
+                {uniqueArr.map(item => {
+                  return (
+                    <li key={item.slug}>
+                      <a href={`wedding/${item.slug}`}>{item.title}</a>
+                    </li>
+                  )
+                })}
+              </ul>
+            </div>
           </div>
         </div>
       </Layout>
