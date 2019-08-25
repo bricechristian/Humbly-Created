@@ -3,7 +3,7 @@ import { graphql } from 'gatsby'
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
 import Layout from '../components/layout'
-import '../components/home.css'
+import HeroSlider from '../components/hero-slider'
 import '../components/media-queries.css'
 
 class RootIndex extends React.Component {
@@ -36,26 +36,27 @@ class RootIndex extends React.Component {
       <Layout location={this.props.location}>
         <div className={`section hero flex align-center pink-bg`}>
           <Helmet title={siteTitle} />
-          <div className={`wrapper md center-text`}>
+          <div className={`wrapper full center-text`}>
             {/* <h1 className="section-headline">Humbly Created Co.</h1> */}
-            <h2 className={`blue-color`}>
-              I’m Brice. I’m a web-developer and videographer with a love for
+            {/* <h2 className={`blue-color`}>
+              I’ m Brice.I’ m a web - developer and videographer with a love for
               all things creative based out of Charleston, South Carolina.
-            </h2>
+            </h2> */}
+            <HeroSlider weddings={uniqueArr} />
           </div>
-          <div className={`wedding-menu`}>
+          {/* <div className={`wedding-menu`}>
             <div className="wrapper">
               <ul className="flex">
                 {uniqueArr.map(item => {
                   return (
                     <li key={item.slug}>
-                      <a href={`wedding/${item.slug}`}>{item.title}</a>
+                      <a href={`wedding/${item.slug}`}> {item.title} </a>
                     </li>
                   )
                 })}
               </ul>
             </div>
-          </div>
+          </div> */}
         </div>
       </Layout>
     )

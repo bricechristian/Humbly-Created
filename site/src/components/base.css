@@ -91,30 +91,17 @@ p {
   letter-spacing: .02em;
 }
 
-/* .angie-sans-font {
-  font-family: angie-sans, sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  letter-spacing: .01em;
-}
-
-.johnston-bold-font {
-  font-family: 'Johnston ITC W01 Bold';
+.hk-font {
+  font-family: "HKMedium", sans-serif;
   font-weight: normal;
   font-style: normal;
 }
 
-.johnston-medium-font {
-  font-family: 'Johnston ITC W01 Medium';
+.hk-bold-font {
+  font-family: "HKBold";
   font-weight: normal;
   font-style: normal;
 }
-
-.johnston-light-font {
-  font-family: 'Johnston ITC W01 Light';
-  font-weight: normal;
-  font-style: normal;
-} */
 
 a {
   color: inherit;
