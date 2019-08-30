@@ -85,3 +85,30 @@
 #about .pricing h2 {
     padding-bottom: 50px;
 }
+
+#about #menu_toggle span,
+#about #menu_toggle span:before,
+#about #menu_toggle span:after {
+    background: #568ec7;
+    /* background: #468ecc; */
+    /* Hamburger Color */
+}
+
+#about #menu_toggle:hover span,
+#about #menu_toggle:hover span:before,
+#about #menu_toggle:hover span:after {
+    background: #fccbb3;
+    /* Hamburger hover color */
+}
+
+#about #menu_toggle.open span:before,
+#about #menu_toggle.open span:after {
+    background: white;
+    /* X color */
+}
+
+#about #menu_toggle.open:hover span:before,
+#about #menu_toggle.open:hover span:after {
+    background: #00abed !important;
+    /* X hover color */
+}

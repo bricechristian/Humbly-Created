@@ -235,3 +235,30 @@
     color: #fcccb3;
     cursor: default;
 }
+
+#weddings #menu_toggle span,
+#weddings #menu_toggle span:before,
+#weddings #menu_toggle span:after {
+    background: #568ec7;
+    /* background: #468ecc; */
+    /* Hamburger Color */
+}
+
+#weddings #menu_toggle:hover span,
+#weddings #menu_toggle:hover span:before,
+#weddings #menu_toggle:hover span:after {
+    background: #fccbb3;
+    /* Hamburger hover color */
+}
+
+#weddings #menu_toggle.open span:before,
+#weddings #menu_toggle.open span:after {
+    background: white;
+    /* X color */
+}
+
+#weddings #menu_toggle.open:hover span:before,
+#weddings #menu_toggle.open:hover span:after {
+    background: #00abed !important;
+    /* X hover color */
+}

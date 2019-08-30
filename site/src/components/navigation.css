@@ -1,6 +1,8 @@
 /* Header + Menu */
 
-html.menu-open #header.sticky {
+body.open {
+  overflow: hidden;
+  height: 100vh;
   position: fixed;
 }
 
@@ -33,6 +35,7 @@ html.menu-open #header.sticky {
 #header .left,
 #header .right {
   flex: 1;
+  position: relative;
 }
 
 
@@ -116,7 +119,7 @@ html.menu-open #header.sticky {
   width: 28px;
   height: 28px;
   position: absolute;
-  top: 45px;
+  top: 25%;
   right: 5%;
   z-index: 9999;
   overflow: hidden;
@@ -131,10 +134,10 @@ html.menu-open #header.sticky {
   display: block;
   content: '';
   width: 28px;
-  height: 2px;
+  height: 1px;
   position: absolute;
   left: 0;
-  top: -9px;
+  top: -7px;
   background: white;
   /* background: #468ecc; */
   /* Hamburger Color */
@@ -148,10 +151,16 @@ html.menu-open #header.sticky {
 
 #menu_toggle span {
   top: 14px;
+  left: -7px;
+}
+
+#menu_toggle span:before {
+  left: 7px;
 }
 
 #menu_toggle span:after {
-  top: 9px;
+  top: 7px;
+  left: -7px;
   -webkit-transform-origin: 50% 100%;
   -ms-transform-origin: 50% 100%;
   transform-origin: 50% 100%;
@@ -165,13 +174,18 @@ html.menu-open #header.sticky {
   /* Hamburger hover color */
 }
 
-#menu_toggle.open {
+/* #menu_toggle.open {
   position: fixed;
+} */
+
+#menu_toggle.open span {
+  left: 0;
 }
 
 #menu_toggle.open span:before,
 #menu_toggle.open span:after {
   background: white;
+  left: 0;
   /* X color */
 }
 
@@ -186,13 +200,13 @@ html.menu-open #header.sticky {
 }
 
 #menu_toggle.open span:before {
-  -webkit-transform: translateY(10px) translateX(1px) rotate(45deg);
-  -ms-transform: translateY(10px) translateX(1px) rotate(45deg);
-  transform: translateY(10px) translateX(1px) rotate(45deg);
+  -webkit-transform: translateY(7px) translateX(1px) rotate(45deg);
+  -ms-transform: translateY(7px) translateX(1px) rotate(45deg);
+  transform: translateY(7px) translateX(1px) rotate(45deg);
 }
 
 #menu_toggle.open span:after {
-  -webkit-transform: translateY(-8px) translateX(1px) rotate(-45deg);
-  -ms-transform: translateY(-8px) translateX(1px) rotate(-45deg);
-  transform: translateY(-8px) translateX(1px) rotate(-45deg);
+  -webkit-transform: translateY(-7px) translateX(1px) rotate(-45deg);
+  -ms-transform: translateY(-7px) translateX(1px) rotate(-45deg);
+  transform: translateY(-7px) translateX(1px) rotate(-45deg);
 }

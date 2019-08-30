@@ -19,6 +19,11 @@ class Navigation extends Component {
     this.setState(state => ({
       isMenuOpen: !state.isMenuOpen,
     }))
+    if (this.state.isMenuOpen) {
+      document.body.classList.remove('open')
+    } else {
+      document.body.classList.add('open')
+    }
   }
 
   render() {
