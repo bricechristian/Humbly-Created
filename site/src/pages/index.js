@@ -2,6 +2,8 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
+import PageTransition from 'gatsby-plugin-page-transitions'
+import Navigation from '../components/navigation'
 import Layout from '../components/layout'
 import HeroSlider from '../components/hero-slider'
 import '../components/media-queries.css'
@@ -34,30 +36,33 @@ class RootIndex extends React.Component {
 
     return (
       <Layout location={this.props.location}>
-        <div className={`section hero flex align-center pink-bg`}>
-          <Helmet title={siteTitle} />
-          <div className={`wrapper full center-text`}>
-            {/* <h1 className="section-headline">Humbly Created Co.</h1> */}
-            {/* <h2 className={`blue-color`}>
-              I’ m Brice.I’ m a web - developer and videographer with a love for
-              all things creative based out of Charleston, South Carolina.
-            </h2> */}
-            <HeroSlider weddings={uniqueArr} />
-          </div>
-          {/* <div className={`wedding-menu`}>
-            <div className="wrapper">
-              <ul className="flex">
-                {uniqueArr.map(item => {
-                  return (
-                    <li key={item.slug}>
-                      <a href={`wedding/${item.slug}`}> {item.title} </a>
-                    </li>
-                  )
-                })}
-              </ul>
+        <Navigation />
+        <Helmet title={siteTitle} />
+        <PageTransition>
+          <div className={`section hero flex align-center pink-bg`}>
+            <div className={`wrapper full center-text`}>
+              {/* <h1 className="section-headline">Humbly Created Co.</h1> */}
+              {/* <h2 className={`blue-color`}>
+                I’ m Brice.I’ m a web - developer and videographer with a love for
+                all things creative based out of Charleston, South Carolina.
+              </h2> */}
+              <HeroSlider weddings={uniqueArr} />
             </div>
-          </div> */}
-        </div>
+            {/* <div className={`wedding-menu`}>
+              <div className="wrapper">
+                <ul className="flex">
+                  {uniqueArr.map(item => {
+                    return (
+                      <li key={item.slug}>
+                        <a href={`wedding/${item.slug}`}> {item.title} </a>
+                      </li>
+                    )
+                  })}
+                </ul>
+              </div>
+            </div> */}
+          </div>
+        </PageTransition>
       </Layout>
     )
   }
@@ -78,10 +83,8 @@ export const pageQuery = graphql`
           title
           slug
           date(formatString: "MMMM Do, YYYY")
-          description {
-            childMarkdownRemark {
-              html
-            }
+          about {
+            json
           }
         }
       }

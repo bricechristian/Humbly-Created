@@ -1,0 +1,237 @@
+/* Wedding Parent Page */
+#weddings #header {
+    position: static;
+}
+
+#weddings #header ul {
+    color: #568ec7;
+}
+
+#weddings #header .logo {
+    fill: #568ec7;
+}
+
+#weddings .hero {
+    height: auto;
+    min-height: auto;
+    padding: 25px 0 100px;
+}
+
+#weddings .section.grid {
+    padding-top: 0;
+}
+
+#weddings .flex.grid {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 50px;
+}
+
+#weddings .flex.grid a {
+    position: relative;
+}
+
+#weddings .flex.grid a:before {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    position: absolute;
+    background: rgba(43, 43, 43, 0.4);
+    transition: .3s;
+}
+
+#weddings .flex.grid a.hovered:before {
+    background: transparent;
+}
+
+#weddings .flex.grid .title {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    left: 0;
+    right: 0;
+    margin: auto;
+    font-family: "HKBold", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    color: white;
+    transition: .3s;
+}
+
+#weddings .flex.grid a.hovered .title {
+    color: transparent;
+}
+
+
+@supports (object-fit: cover) {
+    /* #weddings .flex.grid img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+
+    #weddings .flex.grid a {
+        padding: 25% 0;
+    } */
+}
+
+
+/* Individual Weddings */
+.bio {
+    flex: 2;
+    padding-right: 15px;
+}
+
+.bio>* {
+    margin-bottom: 25px;
+}
+
+.bio>*:last-child {
+    margin-bottom: 0;
+}
+
+.bio p {
+    text-align: left;
+    display: block;
+}
+
+.date {
+    flex: 1;
+    padding-left: 15px;
+    position: relative;
+}
+
+.date:before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 2px;
+    background: #468ecc;
+    margin-bottom: 4px;
+    margin-right: 5px;
+}
+
+.main .wrapper .details {
+    padding: 50px 0;
+}
+
+.photography .photographer {
+    align-self: flex-end;
+    padding-bottom: 45px;
+}
+
+.photography .slider {
+    width: 50%;
+    flex: 2;
+    padding-left: 30px;
+}
+
+.photography .slider .slick-list {
+    width: 99%;
+}
+
+.photography .slider .slick-track {
+    display: flex;
+    align-items: center;
+}
+
+.photography .slider .slick-slide {
+    height: auto;
+    max-width: 100%;
+    position: relative;
+    padding: 0 35px;
+
+}
+
+.photography .slider .slick-slide>div {
+    text-align: center;
+}
+
+.photography .slider .slick-slide>div>div {
+    width: auto !important;
+    position: relative;
+    padding: 15px;
+}
+
+.photography .slider .slick-slide>div>div:after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: calc(100% - 30px);
+    height: calc(100% - 30px);
+    background: #fccbb3;
+    z-index: -1;
+    left: 35px;
+    top: 35px;
+}
+
+.photography .slider img {
+    max-height: 400px;
+    margin: auto;
+}
+
+.photography .slider ul.slick-dots.slick-thumb {
+    position: absolute;
+    left: 0;
+    top: 50px;
+    bottom: auto;
+    right: auto;
+    margin: auto;
+    width: 100%;
+    transform: translateX(-25%);
+}
+
+.photography .slider ul.slick-dots.slick-thumb li {
+    display: none;
+    font-size: 90px;
+    line-height: .85 !important;
+}
+
+.photography .slider ul.slick-dots.slick-thumb li:after {
+    content: "of";
+    display: inline-block;
+    font-size: 90px;
+    font-family: "HKBold";
+    color: #fcccb3;
+    cursor: default;
+}
+
+.photography .slider ul.slick-dots.slick-thumb li:last-child {
+    display: block;
+}
+
+.photography .slider ul.slick-dots.slick-thumb li:last-child:after {
+    display: none;
+}
+
+.photography .slider ul.slick-dots.slick-thumb li.slick-active:last-child:before {
+    content: "5 of";
+    display: inline-block;
+    line-height: .8;
+    width: 82px;
+    font-size: 90px;
+    font-family: "HKBold";
+    color: #fcccb3;
+    cursor: default;
+}
+
+.photography .slider ul.slick-dots.slick-thumb li.slick-active {
+    display: block;
+}
+
+.photography .slider ul.slick-dots.slick-thumb a {
+    color: #fcccb3;
+    cursor: default;
+}

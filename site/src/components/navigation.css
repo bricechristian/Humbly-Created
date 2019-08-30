@@ -1,0 +1,64 @@
+/* Header + Menu */
+
+html.menu-open #header.sticky {
+  position: fixed;
+}
+
+#header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 99;
+  transition: .6s cubic-bezier(0.56, 0.1, 0.34, 0.91);
+}
+
+#header.sticky {
+  position: fixed;
+}
+
+@supports ((position: -webkit-sticky) or (position: sticky)) {
+  #header.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+  }
+}
+
+#header .wrapper {
+  padding: 25px 50px;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+}
+
+#header .left,
+#header .right {
+  flex: 1;
+}
+
+
+#header ul {
+  color: white;
+}
+
+#header ul li {
+  display: inline-block;
+  padding: 5px 25px 5px;
+}
+
+#header ul li a {
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: none;
+  /* -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s; */
+}
+
+#header .logo {
+  display: inline-block;
+  max-width: 175px;
+  width: 100%;
+  margin: auto;
+  margin-left: 0;
+  fill: white;
+}

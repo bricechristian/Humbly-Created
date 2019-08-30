@@ -131,9 +131,9 @@ a {
     font-size: 100%;
     vertical-align: baseline;
     background: transparent;
-    -webkit-transition: .3s;
+    /* -webkit-transition: .3s;
     -o-transition: .3s;
-    transition: .3s;
+    transition: .3s; */
 }
 
 ins {

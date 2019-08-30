@@ -1,6 +1,5 @@
 import React from 'react'
 import get from 'lodash/get'
-import YouTube from 'react-youtube'
 import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
@@ -17,14 +16,15 @@ class HeroSlider extends React.Component {
       infinite: true,
       swipeToSlide: false,
       autoplay: true,
-      autoplaySpeed: 12000,
+      autoplaySpeed: 12200,
+      speed: 900,
       slidesToShow: 1,
       slidesToScroll: 1,
-      auseOnHover: false,
+      pauseOnHover: false,
     }
     const posts = get(this.props, 'weddings')
 
-    console.log(posts)
+    // console.log(posts)
 
     return (
       <Slider {...settings}>
@@ -35,17 +35,18 @@ class HeroSlider extends React.Component {
                 <video
                   className={`background-video`}
                   loop
-                  preload
-                  playsinline
-                  webkit-playsinline
-                  muted
+                  preload="true"
+                  playsInline
                   autoPlay
+                  muted
                 >
                   <source src={`${item.slug}.mp4`} type="video/mp4" />
                   <source src={`${item.slug}.ogg`} type="video/ogg" />
                 </video>
               </div>
-              <h2 className={`white-color`}>{item.title}</h2>
+              <div className={`wrapper`}>
+                <h2 className={`white-color shadow`}>{item.title}</h2>
+              </div>
               <a
                 href={`wedding/${item.slug}`}
                 className={`uppercase hk-bold-font white-color`}

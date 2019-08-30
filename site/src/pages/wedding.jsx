@@ -2,9 +2,12 @@ import React from 'react'
 import { Link, graphql } from 'gatsby'
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
-import styles from './blog.module.css'
 import Layout from '../components/layout'
+import Navigation from '../components/navigation'
 import ArticlePreview from '../components/article-preview'
+import WeddingGrid from '../components/wedding-grid'
+import '../components/weddings.css'
+import '../components/media-queries.css'
 
 class WeddingIndex extends React.Component {
   render() {
@@ -36,18 +39,20 @@ class WeddingIndex extends React.Component {
     return (
       <Layout location={this.props.location}>
         <Helmet title={siteTitle} />
-        <div className={styles.hero}>Weddings</div>
-        <div className="wrapper">
-          <h2 className="section-headline">Recent weddings</h2>
-          <ul className="article-list">
-            {uniqueArr.map(node => {
-              return (
-                <li key={node.slug}>
-                  <a href={`wedding/${node.slug}`}>{node.title}</a>
-                </li>
-              )
-            })}
-          </ul>
+        <Navigation />
+        <div className={`section hero`}>
+          <div className={`wrapper lg center-text`}>
+            {/* <h1 className={`blue-color shadow`}>Weddings</h1> */}
+            <h1 className={`blue-color`}>
+              Stay awhile and give our most recent
+              <span className={`shadow`}>wedding reel</span> a look over.
+            </h1>
+          </div>
+        </div>
+        <div className="section grid">
+          <div className="wrapper">
+            <WeddingGrid weddings={uniqueArr} />
+          </div>
         </div>
       </Layout>
     )
@@ -69,10 +74,8 @@ export const pageQuery = graphql`
           title
           slug
           date(formatString: "MMMM Do, YYYY")
-          description {
-            childMarkdownRemark {
-              html
-            }
+          about {
+            json
           }
         }
       }

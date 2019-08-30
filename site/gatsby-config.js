@@ -8,7 +8,10 @@ const contentfulConfig = {
   host: process.env.CONTENTFUL_HOST
 }
 
-const { spaceId, accessToken } = contentfulConfig
+const {
+  spaceId,
+  accessToken
+} = contentfulConfig
 
 if (!spaceId || !accessToken) {
   throw new Error(
@@ -18,7 +21,7 @@ if (!spaceId || !accessToken) {
 
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Contentful starter',
+    title: 'Humbly Created Co. | Charleston Wedding Videography',
   },
   pathPrefix: '/gatsby-contentful-starter',
   plugins: [
@@ -29,6 +32,12 @@ module.exports = {
     {
       resolve: 'gatsby-source-contentful',
       options: contentfulConfig,
+    },
+    {
+      resolve: 'gatsby-plugin-page-transitions',
+      options: {
+        transitionTime: 900
+      }
     }
   ],
 }

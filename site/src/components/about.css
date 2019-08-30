@@ -1,0 +1,87 @@
+#about #header {
+    position: static;
+}
+
+#about #header ul {
+    color: #568ec7;
+}
+
+#about #header .logo {
+    fill: #568ec7;
+}
+
+#about .hero {
+    padding: 25px 0 50px;
+    height: auto;
+    min-height: auto;
+}
+
+#about .hero h1 {
+    font-size: 60px;
+}
+
+#about .me {
+    padding-top: 0;
+}
+
+#about .me .text,
+#about .me .image {
+    flex: 1;
+}
+
+#about .me .text .inner {
+    padding-right: 10%;
+}
+
+#about .me .text .inner p {
+    font-size: 41px;
+}
+
+#about .me .text .inner p.name {
+    font-size: 16px;
+    font-family: "HKBold", sans-serif;
+}
+
+#about .me .text .inner p.name:before {
+    content: "";
+    display: inline-block;
+    width: 17px;
+    height: 2px;
+    background: #568ec7;
+    position: relative;
+    top: -4px;
+    margin-right: 7px;
+}
+
+#about .me .image .inner {
+    padding-left: 10%;
+}
+
+#about .me .image .image-container {
+    position: relative;
+}
+
+#about .me .image .image-container:after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #fccbb3;
+    z-index: -1;
+    left: 35px;
+    top: 35px;
+}
+
+#about .pricing {
+    padding-top: 50px;
+}
+
+#about .pricing .shadow:after {
+    top: 52%;
+    height: 40%;
+}
+
+#about .pricing h2 {
+    padding-bottom: 50px;
+}

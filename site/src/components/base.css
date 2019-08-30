@@ -170,19 +170,19 @@ a {
   -webkit-box-direction: normal;
 }
 
-.flex.space-between {
+.space-between {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
 }
 
-.flex.align-center {
+.align-center {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
 }
 
-.flex.align-end {
+.align-end {
   -webkit-box-align: flex-end;
   -ms-flex-align: flex-end;
   align-items: flex-end;
@@ -195,13 +195,13 @@ a {
   flex-direction: column;
 }
 
-.flex.justify-center {
+.justify-center {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
 }
 
-.flex.justify-end {
+.justify-end {
   -webkit-box-pack: flex-end;
   -ms-flex-pack: flex-end;
   justify-content: flex-end;
@@ -281,8 +281,8 @@ a {
   width: 100%;
   max-width: 1680px;
   margin: 0 auto;
-  padding-left: 40px;
-  padding-right: 40px;
+  padding-left: 50px;
+  padding-right: 50px;
 }
 
 .wrapper.full {
@@ -299,7 +299,7 @@ a {
 }
 
 .wrapper.md {
-  max-width: 920px;
+  max-width: 880px;
 }
 
 .wrapper.sm {
@@ -322,125 +322,25 @@ a {
   background-color: rgba(43, 43, 43, 0.36);
 }
 
-/* Header + Menu */
-
-html.menu-open #header.sticky {
-  position: fixed;
-}
-
-#header {
-  overflow: hidden;
-  top: 0;
-  width: 100%;
-  z-index: 99999;
-  -webkit-transition: .6s cubic-bezier(0.56, 0.1, 0.34, 0.91);
-  -o-transition: .6s cubic-bezier(0.56, 0.1, 0.34, 0.91);
-  transition: .6s cubic-bezier(0.56, 0.1, 0.34, 0.91);
-}
-
-#header.sticky {
-  position: fixed;
-}
-
-@supports ((position: -webkit-sticky) or (position: sticky)) {
-  #header.sticky {
-    position: -webkit-sticky;
-    position: sticky;
-  }
-}
-
-#header .wrapper {
-  padding: 23px 40px;
-  -webkit-transition: .3s;
-  -o-transition: .3s;
-  transition: .3s;
-}
-
-#header ul li {
+.shadow {
+  position: relative;
+  z-index: 1;
+  width: auto !important;
   display: inline-block;
-  padding: 5px 25px 5px;
 }
 
-#header ul li a {
-  font-weight: normal;
-  font-style: normal;
-  text-decoration: none;
-  -webkit-transition: .3s;
-  -o-transition: .3s;
-  transition: .3s;
-}
-
-#header .logo {
-  max-width: 205px;
-  width: 100%;
-  margin: auto;
-}
-
-/* Promo */
-
-#header .promo-bar .wrapper {
-  padding: 5px 15px;
-  font-size: 13px;
-}
-
-.promo-bar {
-  position: -webkit-sticky;
-  position: sticky;
-  display: none;
-  opacity: 0;
-  z-index: -2;
-  width: 100%;
-  top: 0;
-  padding-top: 6px;
-  padding-bottom: 6px;
-  -webkit-transition: .3s;
-  -o-transition: .3s;
-  transition: .3s;
-}
-
-.promo-bar.show {
-  opacity: 1;
-  z-index: 9999999;
-}
-
-.promo-bar .close {
+.shadow:after {
+  content: "";
+  z-index: -1;
+  display: inline-block;
   position: absolute;
-  right: 15px;
-  top: 0;
+  left: 5%;
+  top: 42%;
+  width: 98%;
+  height: 50%;
+  background: #fcccb3;
 }
 
-.promo-bar .close img {
-  width: 9px;
-  height: 9px;
-}
-
-/* Scroll Top */
-
-.scrolltop {
-  display: none;
-  margin: 0 auto;
-  position: fixed;
-  z-index: 9999999;
-  bottom: 20px;
-  right: 20px;
-  cursor: pointer;
-}
-
-.scrolltop .icon {
-  padding: 15px;
-  background: #e5877b;
-  border-radius: 50%;
-}
-
-.scrolltop .icon svg {
-  width: 27px;
-  height: 14px;
-  -webkit-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  transform: rotate(180deg);
-}
-
-/* Footer */
 
 /* Newsletter Popup */
 
@@ -853,56 +753,6 @@ label.radio-container-question {
   width: auto !important;
 }
 
-/* Create a custom radio button */
-
-.checkmark {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 18px;
-  width: 18px;
-  background-color: white;
-  border-radius: 50%;
-  border: 1px solid #e3877d;
-}
-
-/* On mouse-over, add a grey background color */
-
-.radio-container:hover input~.checkmark {
-  background-color: rgba(227, 135, 125, .3);
-}
-
-/* When the radio button is checked, add a blue background */
-
-.radio-container input:checked~.checkmark {
-  background-color: #e3877d;
-}
-
-/* Create the indicator (the dot/circle - hidden when not checked) */
-
-.checkmark:after {
-  content: "";
-  position: absolute;
-  display: none;
-}
-
-/* Show the indicator (dot/circle) when checked */
-
-.radio-container input:checked~.checkmark:after {
-  display: block;
-}
-
-/* Style the indicator (dot/circle) */
-
-.radio-container .checkmark:after {
-  top: 0px;
-  left: 0px;
-  width: 18px;
-  height: 18px;
-  border-radius: 50%;
-  background: #e3877d;
-}
-
 /* content margins */
 
 .inner>*,
@@ -976,12 +826,6 @@ form label.slideUp {
 
 /* Grid layout */
 
-.flex.grid {
-  -webkit-box-align: baseline;
-  -ms-flex-align: baseline;
-  align-items: baseline;
-}
-
 .flex.grid .inner {
   padding: 25px
 }
@@ -1026,48 +870,48 @@ form label.slideUp {
   background-repeat: no-repeat !important;
 }
 
-/* Instagram Feed */
-
-.section.instagram .flex.grid {
-  margin-top: 50px;
+.hero h1 {
+  position: relative;
+  z-index: 9;
+  /* font-size: 100px; */
+  font-size: 60px;
 }
 
-.section.instagram .flex.grid .inner {
-  padding: 12px;
+.bg-fade {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0;
+  transition: 1s;
 }
 
-@supports ((display: -ms-grid) or (display: grid)) {
-  .section.instagram .flex.grid {
-    -ms-grid-columns: 1fr 40px 1fr 40px 1fr 40px 1fr 40px 1fr;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-gap: 40px;
-  }
-
-  .section.instagram .flex.grid .one-fifth {
-    width: initial;
-    text-align: center;
-  }
-
-  .section.instagram .flex.grid .inner {
-    padding: 0;
-  }
+#footer .section {
+  padding: 25px 0;
 }
 
-.section.instagram .headline {
-  font-size: 36px;
-  letter-spacing: .01em;
-  line-height: 1;
-  margin-bottom: 15px;
+#footer .copyright {
+  font-family: "HKBold", sans-serif;
+  font-size: 14px;
+
 }
 
-.section.instagram .follow {
-  font-size: 24px;
+
+/* Home */
+/* #home #header {
+  position: absolute;
+} */
+
+#home #header .logo {
+  fill: white;
 }
 
-.section.instagram .handle {
-  font-weight: normal;
-  font-style: normal;
-  text-decoration: none;
-  line-height: 1;
-  letter-spacing: .2em;
+#home #header ul {
+  color: white;
+}
+
+#home #footer {
+  display: none;
 }
