@@ -912,6 +912,10 @@ form label.slideUp {
   color: white;
 }
 
+#home .section.hero {
+  padding: 0;
+}
+
 #home #footer {
   display: none;
 }

@@ -36,6 +36,10 @@ class WeddingIndex extends React.Component {
 
     const uniqueArr = getUnique(arr, 'title')
 
+    const shadowStyle = {
+      marginLeft: '15px',
+    }
+
     return (
       <Layout location={this.props.location}>
         <Helmet title={siteTitle} />
@@ -45,7 +49,10 @@ class WeddingIndex extends React.Component {
             {/* <h1 className={`blue-color shadow`}>Weddings</h1> */}
             <h1 className={`blue-color`}>
               Stay awhile and give our most recent
-              <span className={`shadow`}>wedding reel</span> a look over.
+              <span className={`shadow`} style={shadowStyle}>
+                wedding reel
+              </span>{' '}
+              a look over.
             </h1>
           </div>
         </div>

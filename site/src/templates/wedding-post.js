@@ -11,11 +11,14 @@ import YouTube from 'react-youtube'
 import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
+import '../components/media-queries.css'
 
 class WeddingPostTemplate extends React.Component {
   constructor(props) {
     super(props)
-    this.state = { bgAnimate: '' }
+    this.state = {
+      bgAnimate: '',
+    }
   }
 
   componentDidMount() {
@@ -43,7 +46,7 @@ class WeddingPostTemplate extends React.Component {
     const siteTitle = get(this.props, 'data.site.siteMetadata.title')
 
     const opts = {
-      height: '450',
+      height: '400',
       width: '100%',
       playerVars: {
         // https://developers.google.com/youtube/player_parameters
@@ -77,12 +80,13 @@ class WeddingPostTemplate extends React.Component {
 
     const settings = {
       customPaging: function(i, index) {
-        return <a key={i}>{i + 1} </a>
+        return <a key={i}> {i + 1} </a>
       },
       dots: true,
       dotsClass: 'slick-dots slick-thumb',
+      swipeToSlide: true,
       infinite: true,
-      autoplay: true,
+      autoplay: false,
       autoplaySpeed: 4000,
       speed: 900,
       slidesToShow: 1,
@@ -92,12 +96,11 @@ class WeddingPostTemplate extends React.Component {
 
     return (
       <Layout location={this.props.location}>
-        <Helmet title={`${currentPost.title} | ${siteTitle}`} />
-        <Navigation />
+        <Helmet title={`${currentPost.title} | ${siteTitle}`} /> <Navigation />
         <PageTransition>
           <div className={`section hero flex align-center justify-center`}>
             <div className={'wrapper'}>
-              <h1 className={`white-color shadow`}>{currentPost.title}</h1>
+              <h1 className={`white-color shadow`}> {currentPost.title} </h1>
             </div>
             <div className={`bg-fade pink-bg`} style={bgStyle}></div>
             <div className={`video-container`}>
@@ -137,7 +140,7 @@ class WeddingPostTemplate extends React.Component {
               </div>
               <div className={`photography flex blue-color text-left`}>
                 <div className={`photographer`}>
-                  <p>Photography By:</p>
+                  <p> Photography By: </p>
                   <a
                     href={currentPost.photographer_website}
                     className={`hk-bold-font`}

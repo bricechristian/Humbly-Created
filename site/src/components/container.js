@@ -43,10 +43,10 @@ class Container extends Component {
           {children}
           <Footer />
         </div>
-        <Safe.script
+        {/* <Safe.script
           src="https://embed.small.chat/TMUR1BVEYGMHRHUHKL.js"
           async
-        ></Safe.script>
+        ></Safe.script> */}
       </>
     )
   }
