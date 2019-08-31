@@ -11,6 +11,7 @@ import YouTube from 'react-youtube'
 import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
+import '../components/weddings.css'
 
 class WeddingPostTemplate extends React.Component {
   constructor(props) {
