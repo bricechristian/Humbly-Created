@@ -4,10 +4,9 @@ import get from 'lodash/get'
 import Helmet from 'react-helmet'
 import Layout from '../components/layout'
 import Navigation from '../components/navigation'
-import ArticlePreview from '../components/article-preview'
+import Footer from '../components/footer'
 import WeddingGrid from '../components/wedding-grid'
 import '../components/weddings.css'
-import '../components/media-queries.css'
 
 class WeddingIndex extends React.Component {
   render() {
@@ -43,23 +42,26 @@ class WeddingIndex extends React.Component {
     return (
       <Layout location={this.props.location}>
         <Helmet title={siteTitle} />
-        <Navigation />
-        <div className={`section hero`}>
-          <div className={`wrapper lg center-text`}>
-            {/* <h1 className={`blue-color shadow`}>Weddings</h1> */}
-            <h1 className={`blue-color`}>
-              Stay awhile and give our most recent
-              <span className={`shadow`} style={shadowStyle}>
-                wedding reel
-              </span>{' '}
-              a look over.
-            </h1>
+        <div class="page" id="weddings">
+          <Navigation />
+          <div className={`section hero`}>
+            <div className={`wrapper lg center-text`}>
+              {/* <h1 className={`blue-color shadow`}>Weddings</h1> */}
+              <h1 className={`blue-color`}>
+                Stay awhile and give our most recent
+                <span className={`shadow`} style={shadowStyle}>
+                  wedding reel
+                </span>{' '}
+                a look over.
+              </h1>
+            </div>
           </div>
-        </div>
-        <div className="section grid">
-          <div className="wrapper">
-            <WeddingGrid weddings={uniqueArr} />
+          <div className={`section grid`}>
+            <div className="wrapper">
+              <WeddingGrid weddings={uniqueArr} />
+            </div>
           </div>
+          <Footer />
         </div>
       </Layout>
     )

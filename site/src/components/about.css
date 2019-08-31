@@ -109,6 +109,104 @@
 
 #about #menu_toggle.open:hover span:before,
 #about #menu_toggle.open:hover span:after {
-    background: #00abed !important;
+    background: #00abed;
     /* X hover color */
+}
+
+@media screen and (max-width: 1400px) {
+
+    #about .hero h1 {
+        font-size: 5vw;
+    }
+
+    #about .me .text .inner p {
+        font-size: 3vw;
+    }
+
+}
+
+@media screen and (max-width: 767px) {
+
+    #about .hero h1 {
+        font-size: 8vw;
+    }
+
+    table th {
+        font-size: 3.6vw;
+    }
+
+    table thead span.price {
+        font-size: 2.8vw;
+    }
+
+    #about .hero {
+        padding: 3% 0 2%;
+    }
+
+    #about .me {
+        padding-bottom: 0;
+        padding-top: 0;
+    }
+
+    #about .me .text,
+    #about .me .image {
+        width: 100%;
+        flex-basis: 100%;
+    }
+
+    #about .me .text {
+        order: 2;
+        padding-top: 10%;
+    }
+
+    #about .me .image .inner {
+        padding: 10%;
+    }
+
+    #about .me .text .inner {
+        padding: 0;
+    }
+
+    #about .me .text .inner p {
+        font-size: 24px;
+    }
+
+
+    #about .me .text .inner p.name {
+        font-size: 14px;
+    }
+
+    #about .me .text .inner p.name:before {
+        height: .29vw;
+        top: -.5vw;
+    }
+
+    #about .pricing {
+        padding-top: 10%;
+    }
+
+    #about .pricing h2 {
+        font-size: 7vw;
+        padding-bottom: 0;
+    }
+
+    #about table {
+        margin: 25px 0;
+    }
+
+    #about table:first-child {
+        margin-top: 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    table thead th {
+        padding: 25px 15px;
+    }
+
+    table tbody tr td {
+        font-size: 14px;
+    }
+
 }

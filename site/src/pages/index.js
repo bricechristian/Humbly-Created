@@ -2,9 +2,10 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
-import PageTransition from 'gatsby-plugin-page-transitions'
+// import PageTransition from 'gatsby-plugin-page-transitions'
 import Navigation from '../components/navigation'
 import Layout from '../components/layout'
+import Footer from '../components/footer'
 import HeroSlider from '../components/hero-slider'
 import '../components/media-queries.css'
 
@@ -36,9 +37,9 @@ class RootIndex extends React.Component {
 
     return (
       <Layout location={this.props.location}>
-        <Navigation />
         <Helmet title={siteTitle} />
-        <PageTransition>
+        <div class="page" id="home">
+          <Navigation />
           <div className={`section hero flex align-center pink-bg`}>
             <div className={`wrapper full center-text`}>
               {/* <h1 className="section-headline">Humbly Created Co.</h1> */}
@@ -62,7 +63,8 @@ class RootIndex extends React.Component {
               </div>
             </div> */}
           </div>
-        </PageTransition>
+          <Footer />
+        </div>
       </Layout>
     )
   }

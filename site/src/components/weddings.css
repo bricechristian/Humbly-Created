@@ -262,3 +262,138 @@
     background: #00abed !important;
     /* X hover color */
 }
+
+@media screen and (max-width: 1400px) {
+
+    #weddings .hero h1 {
+        font-size: 5vw;
+    }
+
+}
+
+@media screen and (max-width: 767px) {
+
+    .section.hero .slick-slider .slick-slide a {
+        width: calc(100% - 50px);
+    }
+
+    #weddings .hero h1 {
+        font-size: 8vw;
+    }
+
+    #weddings .hero {
+        padding: 25px 0;
+    }
+
+    #weddings .flex.grid {
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 10% 6%;
+    }
+
+    .main .wrapper .details {
+        flex-wrap: wrap;
+    }
+
+    .bio {
+        order: 2;
+        width: 100%;
+        flex-basis: 100%;
+    }
+
+    .date {
+        order: 1;
+        width: 100%;
+        flex-basis: 100%;
+        text-align: center;
+        padding: 0 0 15px;
+    }
+
+    .date:before {
+        display: none;
+    }
+
+    .photography {
+        flex-wrap: wrap;
+    }
+
+    .photography .photographer {
+        margin: auto;
+        text-align: center;
+        padding-bottom: 25px;
+    }
+
+    .photography .slider {
+        width: 100%;
+        padding: 0;
+    }
+
+    .photography .slider .slick-slide {
+        padding: 0 7px;
+    }
+
+    .photography .slider ul.slick-dots.slick-thumb {
+        position: static;
+        transform: none;
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+        padding-top: 25px;
+
+    }
+
+    .photography .slick-dots li {
+        width: 100%;
+        font-size: 13vw;
+    }
+
+    .photography .slider ul.slick-dots.slick-thumb li:after,
+    .photography .slider ul.slick-dots.slick-thumb li.slick-active:last-child:before {
+        font-size: 13vw;
+    }
+
+    ul.slick-dots.slick-thumb li.slick-active,
+    .photography .slider ul.slick-dots.slick-thumb li:last-child {
+        display: inline-block;
+    }
+
+    .photography .slider ul.slick-dots.slick-thumb li.slick-active:last-child {
+        display: flex;
+    }
+
+    .photography .slider ul.slick-dots.slick-thumb li.slick-active:last-child a {
+        flex: 1;
+    }
+
+    .photography .slider ul.slick-dots.slick-thumb li.slick-active:last-child:before {
+        width: 100%;
+        flex: 1.25;
+        text-align: right;
+        margin: 0 5px;
+        position: relative;
+        top: 2px;
+        left: -5px
+    }
+
+    ul.slick-dots.slick-thumb li.slick-active {
+        text-align: right;
+        flex: 1.25;
+    }
+
+    .photography .slider ul.slick-dots.slick-thumb li:last-child {
+        text-align: left;
+        text-indent: 5%;
+        flex: 1;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    .slick-slider {
+        overflow: hidden;
+    }
+
+    #weddings .flex.grid {
+        grid-template-columns: 1fr;
+        grid-gap: 3%;
+    }
+}

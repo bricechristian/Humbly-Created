@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import Container from './container'
+// import PageTransition from '@steveeeie/react-page-transition'
 
 class Template extends React.Component {
   render() {
@@ -11,7 +12,16 @@ class Template extends React.Component {
       rootPath = __PATH_PREFIX__ + `/`
     }
 
-    return <Container>{children}</Container>
+    return (
+      <Container>
+        {/* <PageTransition
+          preset="moveToLeftFromRight"
+          transitionKey={location.pathname}
+        > */}
+        {children}
+        {/* </PageTransition> */}
+      </Container>
+    )
   }
 }
 
