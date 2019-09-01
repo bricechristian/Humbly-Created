@@ -7,7 +7,6 @@ import Navigation from '../components/navigation'
 import Layout from '../components/layout'
 import Footer from '../components/footer'
 import HeroSlider from '../components/hero-slider'
-import '../components/media-queries.css'
 
 class RootIndex extends React.Component {
   render() {

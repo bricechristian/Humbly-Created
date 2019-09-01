@@ -877,6 +877,12 @@ form label.slideUp {
   font-size: 60px;
 }
 
+.section.hero {
+  height: 100vh;
+  min-height: 350px;
+  position: relative;
+}
+
 .bg-fade {
   position: absolute;
   top: 0;
@@ -886,6 +892,41 @@ form label.slideUp {
   z-index: -1;
   opacity: 0;
   transition: 1s;
+}
+
+.video-container {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  z-index: -3;
+  width: 100%;
+  height: 100%;
+}
+
+.video-container:before {
+  position: absolute;
+  content: " ";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  z-index: 1;
+  background-color: rgba(43, 43, 43, 0.09);
+}
+
+.background-video {
+  /* z-index: -2; */
+  position: relative;
+  /* left: 50%;
+  right: 50%; */
+  margin: auto;
+  /* transform: translate(-50%); */
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  /* max-width: 100vw; */
 }
 
 #footer .section {

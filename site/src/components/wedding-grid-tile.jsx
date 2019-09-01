@@ -26,6 +26,10 @@ class WeddingGridTile extends Component {
   render() {
     const detail = get(this.props, 'details')
 
+    const hiddenImages = {
+      display: 'none',
+    }
+
     return (
       <a
         href={`/wedding/${detail.slug}`}
@@ -35,9 +39,13 @@ class WeddingGridTile extends Component {
         onMouseLeave={() => this.staticGIF()}
       >
         <span className={`image-container`}>
-          <img src={`${detail.slug}${this.state.src}`} />
+          <img src={`/${detail.slug}${this.state.src}`} />
         </span>
         <span className={`title`}>{detail.title}</span>
+        <span className="hidden-images" style={hiddenImages}>
+          <img src={`/${detail.slug}.gif`} alt="" />
+          <img src={`/${detail.slug}-still.gif`} alt="" />
+        </span>
       </a>
     )
   }

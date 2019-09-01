@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import reset from './reset.css'
 import base from './base.css'
+import '../components/media-queries.css'
 
 class Container extends Component {
   constructor(props) {
