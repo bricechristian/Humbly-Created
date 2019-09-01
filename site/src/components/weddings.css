@@ -196,12 +196,15 @@
 .photography .slider ul.slick-dots.slick-thumb li {
     display: none;
     font-size: 90px;
+    height: auto !important;
     line-height: .85 !important;
+    font-family: HKBold;
 }
 
 .photography .slider ul.slick-dots.slick-thumb li:after {
     content: "of";
     display: inline-block;
+    margin-bottom: 7px;
     font-size: 90px;
     font-family: "HKBold";
     color: #fcccb3;
