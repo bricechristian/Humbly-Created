@@ -15,7 +15,7 @@ class AboutIndex extends React.Component {
     return (
       <Layout location={this.props.location}>
         <Helmet title={siteTitle} />
-        <div class="page" id="about">
+        <div className="page" id="about">
           <Navigation />
           <div className={`section hero`}>
             <div className={`wrapper lg center-text`}>

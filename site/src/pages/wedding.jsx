@@ -42,7 +42,7 @@ class WeddingIndex extends React.Component {
     return (
       <Layout location={this.props.location}>
         <Helmet title={siteTitle} />
-        <div class="page" id="weddings">
+        <div className="page" id="weddings">
           <Navigation />
           <div className={`section hero`}>
             <div className={`wrapper lg center-text`}>

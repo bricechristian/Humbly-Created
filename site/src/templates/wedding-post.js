@@ -96,81 +96,84 @@ class WeddingPostTemplate extends React.Component {
 
     return (
       <Layout location={this.props.location}>
-        <Helmet title={`${currentPost.title} | ${siteTitle}`} /> <Navigation />
-        <div className={`section hero flex align-center justify-center`}>
-          <div className={'wrapper'}>
-            <h1 className={`white-color shadow`}> {currentPost.title} </h1>
-          </div>
-          <div className={`bg-fade pink-bg`} style={bgStyle}></div>
-          <div className={`video-container`}>
-            <video
-              className={`background-video`}
-              loop
-              preload="true"
-              playsInline
-              autoPlay
-              muted
-            >
-              <source src={`/${currentPost.slug}.mp4`} type="video/mp4" />
-              <source src={`/${currentPost.slug}.ogg`} type="video/ogg" />
-            </video>
-          </div>
-        </div>
-        <div className={`section main`}>
-          <div className={`wrapper md center-text`}>
-            <YouTube
-              videoId={currentPost.video_link}
-              opts={opts}
-              onReady={this._onReady}
-            />
-            <div className={`flex space-between details`}>
-              <div className={`bio blue-color`}>
-                {currentPost.about.json.content.map(item => {
-                  return (
-                    <p key={item.content[0].value.substr(0, 3)}>
-                      {item.content[0].value}
-                    </p>
-                  )
-                })}
-              </div>
-              <div className={`date blue-color hk-bold-font text-right`}>
-                {currentPost.date}
-              </div>
+        <Helmet title={`${currentPost.title} | ${siteTitle}`} />
+        <div className={`page`}>
+          <Navigation />
+          <div className={`section hero flex align-center justify-center`}>
+            <div className={'wrapper'}>
+              <h1 className={`white-color shadow`}> {currentPost.title} </h1>
             </div>
-            <div className={`photography flex blue-color text-left`}>
-              <div className={`photographer`}>
-                <p> Photography By: </p>
-                <a
-                  href={currentPost.photographer_website}
-                  className={`hk-bold-font`}
-                  target="_blank"
-                >
-                  {currentPost.photographer_name}
-                </a>
-              </div>
-              <div className={`slider`}>
-                <Slider {...settings}>
-                  <div>
-                    <img src={`/${currentPost.slug}-1.jpg`} />
-                  </div>
-                  <div>
-                    <img src={`/${currentPost.slug}-2.jpg`} />
-                  </div>
-                  <div>
-                    <img src={`/${currentPost.slug}-3.jpg`} />
-                  </div>
-                  <div>
-                    <img src={`/${currentPost.slug}-4.jpg`} />
-                  </div>
-                  <div>
-                    <img src={`/${currentPost.slug}-5.jpg`} />
-                  </div>
-                </Slider>
-              </div>
+            <div className={`bg-fade pink-bg`} style={bgStyle}></div>
+            <div className={`video-container`}>
+              <video
+                className={`background-video`}
+                loop
+                preload="true"
+                playsInline
+                autoPlay
+                muted
+              >
+                <source src={`/${currentPost.slug}.mp4`} type="video/mp4" />
+                <source src={`/${currentPost.slug}.ogg`} type="video/ogg" />
+              </video>
             </div>
           </div>
+          <div className={`section main`}>
+            <div className={`wrapper md center-text`}>
+              <YouTube
+                videoId={currentPost.video_link}
+                opts={opts}
+                onReady={this._onReady}
+              />
+              <div className={`flex space-between details`}>
+                <div className={`bio blue-color`}>
+                  {currentPost.about.json.content.map(item => {
+                    return (
+                      <p key={item.content[0].value.substr(0, 3)}>
+                        {item.content[0].value}
+                      </p>
+                    )
+                  })}
+                </div>
+                <div className={`date blue-color hk-bold-font text-right`}>
+                  {currentPost.date}
+                </div>
+              </div>
+              <div className={`photography flex blue-color text-left`}>
+                <div className={`photographer`}>
+                  <p> Photography By: </p>
+                  <a
+                    href={currentPost.photographer_website}
+                    className={`hk-bold-font`}
+                    target="_blank"
+                  >
+                    {currentPost.photographer_name}
+                  </a>
+                </div>
+                <div className={`slider`}>
+                  <Slider {...settings}>
+                    <div>
+                      <img src={`/${currentPost.slug}-1.jpg`} />
+                    </div>
+                    <div>
+                      <img src={`/${currentPost.slug}-2.jpg`} />
+                    </div>
+                    <div>
+                      <img src={`/${currentPost.slug}-3.jpg`} />
+                    </div>
+                    <div>
+                      <img src={`/${currentPost.slug}-4.jpg`} />
+                    </div>
+                    <div>
+                      <img src={`/${currentPost.slug}-5.jpg`} />
+                    </div>
+                  </Slider>
+                </div>
+              </div>
+            </div>
+          </div>
+          <Footer />
         </div>
-        <Footer />
       </Layout>
     )
   }

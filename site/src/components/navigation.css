@@ -64,6 +64,7 @@ body.open {
   margin: auto;
   margin-left: 0;
   fill: white;
+  text-decoration: none;
 }
 
 #menu_drawer {

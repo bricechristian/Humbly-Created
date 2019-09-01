@@ -37,7 +37,7 @@ class RootIndex extends React.Component {
     return (
       <Layout location={this.props.location}>
         <Helmet title={siteTitle} />
-        <div class="page" id="home">
+        <div className="page" id="home">
           <Navigation />
           <div className={`section hero flex align-center pink-bg`}>
             <div className={`wrapper full center-text`}>

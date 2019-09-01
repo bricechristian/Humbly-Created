@@ -7,33 +7,36 @@ class Container extends Component {
   constructor(props) {
     super(props)
     this.state = {
+      loading: true,
       currentPage: null,
     }
   }
 
-  // componentDidMount() {
-  //   const URL = window.location.pathname
-
-  //   if (URL.endsWith('wedding')) {
-  //     this.setState({
-  //       currentPage: 'weddings',
-  //     })
-  //   } else if (URL.endsWith('about')) {
-  //     this.setState({
-  //       currentPage: 'about',
-  //     })
-  //   } else if (URL == '/') {
-  //     this.setState({
-  //       currentPage: 'home',
-  //     })
-  //   }
-  // }
+  componentDidMount() {
+    // this simulates an async action, after which the component will render the content
+    onWaiting().then(() => this.setState({ loading: false }))
+  }
 
   render() {
     const { children } = this.props
 
-    return <>{children}</>
+    const { loading } = this.state
+
+    if (loading) {
+      // if your component doesn't have to wait for an async action, remove this block
+      return null // render null when app is not ready
+    }
+
+    return (
+      <div className={`container ${this.state.loading ? '' : 'ready'}`}>
+        {children}
+      </div>
+    )
   }
+}
+
+function onWaiting() {
+  return new Promise(resolve => setTimeout(() => resolve(), 100))
 }
 
 export default Container
