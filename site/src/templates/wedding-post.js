@@ -2,7 +2,7 @@
 
 import React from 'react'
 import { graphql } from 'gatsby'
-import Helmet from 'react-helmet'
+import SEO from '../components/SEO'
 import get from 'lodash/get'
 import Layout from '../components/layout'
 import Footer from '../components/footer'
@@ -86,7 +86,7 @@ class WeddingPostTemplate extends React.Component {
       dotsClass: 'slick-dots slick-thumb',
       swipeToSlide: true,
       infinite: true,
-      autoplay: false,
+      autoplay: true,
       autoplaySpeed: 4000,
       speed: 900,
       slidesToShow: 1,
@@ -96,7 +96,7 @@ class WeddingPostTemplate extends React.Component {
 
     return (
       <Layout location={this.props.location}>
-        <Helmet title={`${currentPost.title} | ${siteTitle}`} />
+        <SEO />
         <div className={`page`}>
           <Navigation />
           <div className={`section hero flex align-center justify-center`}>

@@ -34,6 +34,7 @@ class HeroSlider extends React.Component {
               <div className={`video-container`}>
                 <video
                   className={`background-video`}
+                  poster={`${item.slug}-poster.jpg`}
                   loop
                   preload="true"
                   playsInline

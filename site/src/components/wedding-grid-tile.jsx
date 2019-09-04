@@ -7,8 +7,14 @@ class WeddingGridTile extends Component {
     this.state = {
       hover: '',
       src: '-still.gif',
+      didImageLoad: false,
     }
   }
+
+  handleImageLoading() {
+    this.setState({ didImageLoad: true })
+  }
+
   animateGIF() {
     this.setState({
       src: '.gif',
@@ -38,13 +44,24 @@ class WeddingGridTile extends Component {
         onMouseEnter={() => this.animateGIF()}
         onMouseLeave={() => this.staticGIF()}
       >
-        <span className={`image-container`}>
-          <img src={`/${detail.slug}${this.state.src}`} />
+        <span
+          className={`image-container ${
+            this.state.didImageLoad ? '' : 'blurred'
+          }`}
+        >
+          {this.state.didImageLoad ? (
+            <img src={`/${detail.slug}${this.state.src}`} />
+          ) : (
+            <img src={`/${detail.slug}-lowres.jpg`} />
+          )}
         </span>
         <span className={`title`}>{detail.title}</span>
         <span className="hidden-images" style={hiddenImages}>
-          <img src={`/${detail.slug}.gif`} alt="" />
-          <img src={`/${detail.slug}-still.gif`} alt="" />
+          <img
+            src={`/${detail.slug}.gif`}
+            onLoad={() => this.handleImageLoading()}
+          />
+          {/* <img src={`/${detail.slug}-still.gif`} alt="" /> */}
         </span>
       </a>
     )

@@ -1,7 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import get from 'lodash/get'
-import Helmet from 'react-helmet'
+import SEO from '../components/SEO'
 // import PageTransition from 'gatsby-plugin-page-transitions'
 import Navigation from '../components/navigation'
 import Layout from '../components/layout'
@@ -36,7 +36,7 @@ class RootIndex extends React.Component {
 
     return (
       <Layout location={this.props.location}>
-        <Helmet title={siteTitle} />
+        <SEO />
         <div className="page" id="home">
           <Navigation />
           <div className={`section hero flex align-center pink-bg`}>

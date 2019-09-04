@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
 import get from 'lodash/get'
-import Helmet from 'react-helmet'
+import SEO from '../components/SEO'
 import Layout from '../components/layout'
 import Footer from '../components/footer'
 import Navigation from '../components/navigation'
@@ -14,7 +14,7 @@ class AboutIndex extends React.Component {
 
     return (
       <Layout location={this.props.location}>
-        <Helmet title={siteTitle} />
+        <SEO />
         <div className="page" id="about">
           <Navigation />
           <div className={`section hero`}>

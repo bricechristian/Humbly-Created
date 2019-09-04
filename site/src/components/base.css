@@ -622,21 +622,9 @@ html.menu-open body {
   outline: none;
 }
 
-.slick-dots li button:before {
-  font-size: 35px;
-  background: transparent;
-  border: 1px solid #e5877b;
-  border-radius: 50%;
-  width: 10px;
-  height: 10px;
-  background: #f2efed;
-  opacity: 1;
-  content: "";
-}
-
-.slick-dots li.slick-active button:before {
-  background: #e5877b;
-  border-color: #e5877b;
+.slick-next,
+.slick-prev {
+  display: none !important;
 }
 
 /* content margins */
@@ -845,4 +833,59 @@ form label.slideUp {
 
 #home #footer {
   display: none;
+}
+
+@media screen and (max-width: 1400px) {
+
+  /* #header .logo {
+      max-width: 12vw;
+  } */
+
+  #home .section.hero h2,
+  .hero h1 {
+    font-size: 7vw;
+  }
+
+}
+
+@media screen and (min-width: 768px) {
+  .hide_767 {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .show_767 {
+    display: none !important;
+  }
+
+  .wrapper {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  #header .wrapper {
+    padding: 5% !important;
+  }
+
+  .section {
+    padding-top: 10%;
+    padding-bottom: 10%;
+  }
+
+  .flex {
+    flex-wrap: wrap;
+  }
+
+  #home .section.hero h2 {
+    font-size: 8vw;
+  }
+}
+
+@media screen and (max-width: 480px) {
+
+  .slick-slider {
+    overflow: hidden;
+  }
+
 }

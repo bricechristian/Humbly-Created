@@ -22,14 +22,50 @@ if (!spaceId || !accessToken) {
 module.exports = {
   siteMetadata: {
     title: 'Humbly Created Co. | Charleston Wedding Videography',
+    titleTemplate: "%s",
+    description: "Humbly Created Co. is a Charleston wedding videography group specializing in making moments last a lifetime.",
+    url: "https://inspiring-swanson-769324.netlify.com", // No trailing slash allowed!
+    image: "/og-image.jpg", // Path to your image you placed in the 'static' folder
   },
   pathPrefix: '/gatsby-contentful-starter',
   plugins: [
+    'gatsby-plugin-transition-link',
     'gatsby-transformer-remark',
     'gatsby-plugin-react-helmet',
     {
       resolve: 'gatsby-source-contentful',
       options: contentfulConfig,
+    },
+    {
+      resolve: `gatsby-plugin-favicon`,
+      options: {
+        logo: "./src/favicon.png",
+
+        // WebApp Manifest Configuration
+        appName: null, // Inferred with your package.json
+        appDescription: null,
+        developerName: null,
+        developerURL: null,
+        dir: 'auto',
+        lang: 'en-US',
+        background: '#fff',
+        theme_color: '#fff',
+        display: 'standalone',
+        orientation: 'any',
+        start_url: '/?homescreen=1',
+        version: '1.0',
+
+        icons: {
+          android: true,
+          appleIcon: true,
+          appleStartup: true,
+          coast: false,
+          favicons: true,
+          firefox: true,
+          yandex: false,
+          windows: false
+        }
+      }
     }
   ],
 }

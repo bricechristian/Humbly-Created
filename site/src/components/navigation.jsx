@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'gatsby'
 import SVG from 'react-inlinesvg'
+import AniLink from 'gatsby-plugin-transition-link/AniLink'
 import './navigation.css'
 
 class Navigation extends Component {
@@ -32,17 +33,26 @@ class Navigation extends Component {
       <div id="header">
         <div className={`wrapper full flex`}>
           <div className={`left`}>
-            <Link to="/" className={`logo`}>
+            {/* <Link to="/" className={`logo`}>
               <SVG src="/logo.svg" />
-            </Link>
+            </Link> */}
+            <AniLink paintDrip to="/" hex="#fccdb4" className={`logo`}>
+              <SVG src="/logo.svg" />
+            </AniLink>
           </div>
           <div className={`right`}>
             <ul className={`text-right show_767`}>
               <li className={`hk-bold-font`}>
-                <Link to="/about">About</Link>
+                {/* <Link to="/about">About</Link> */}
+                <AniLink paintDrip to="/about" hex="#fccdb4">
+                  About
+                </AniLink>
               </li>
               <li className={`hk-bold-font`}>
-                <Link to="/wedding">Weddings</Link>
+                {/* <Link to="/wedding">Weddings</Link> */}
+                <AniLink paintDrip to="/wedding" hex="#fccdb4">
+                  Weddings
+                </AniLink>
               </li>
             </ul>
             <div
