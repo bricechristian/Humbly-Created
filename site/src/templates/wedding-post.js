@@ -25,13 +25,13 @@ class WeddingPostTemplate extends React.Component {
     window.addEventListener('scroll', this.handleScroll.bind(this))
   }
 
-  componentWillUnmount() {
-    window.removeEventListener('scroll', this.handleScroll.bind(this))
-  }
+  // componentWillUnmount() {
+  //   window.removeEventListener('scroll', this.handleScroll.bind(this))
+  // }
 
   handleScroll(event) {
     let scrollTop = event.srcElement.body.scrollTop,
-      itemTranslate = (scrollTop + 1) * 0.99
+      itemTranslate = (scrollTop + 1) * 1.00
 
     // console.log(itemTranslate)
 
@@ -86,7 +86,7 @@ class WeddingPostTemplate extends React.Component {
       dotsClass: 'slick-dots slick-thumb',
       swipeToSlide: true,
       infinite: true,
-      autoplay: true,
+      autoplay: false,
       autoplaySpeed: 4000,
       speed: 900,
       slidesToShow: 1,

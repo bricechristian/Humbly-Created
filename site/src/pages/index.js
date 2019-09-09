@@ -9,6 +9,19 @@ import Footer from '../components/footer'
 import HeroSlider from '../components/hero-slider'
 
 class RootIndex extends React.Component {
+  constructor(props) {
+    super(props)
+  }
+
+  pageIsWaiting = () => {
+    // console.log(`it's ready`)
+    this.setState({ loading: false })
+  }
+
+  componentDidMount() {
+    console.log(this.props)
+  }
+
   render() {
     const siteTitle = get(this.props, 'data.site.siteMetadata.title')
     const posts = get(this.props, 'data.allContentfulWedding.edges')

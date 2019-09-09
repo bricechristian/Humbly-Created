@@ -369,15 +369,17 @@
     }
 
     .photography .slider ul.slick-dots.slick-thumb li.slick-active:last-child a {
-        flex: 1;
+        flex: 0 auto;
         position: relative;
-        left: -8px;
+        left: 0;
+        width: 50%;
+        flex-basis: 50%;
     }
 
     .photography .slider ul.slick-dots.slick-thumb li.slick-active:last-child:before {
         font-size: 90px !important;
         width: 100%;
-        flex: 2;
+        flex: 0 auto;
         text-align: right;
         margin: 0 5px;
         position: relative;
@@ -387,13 +389,17 @@
 
     ul.slick-dots.slick-thumb li.slick-active {
         text-align: right;
-        flex: 2;
+        flex: 0 auto;
+        /* flex-basis: 100%; */
+
     }
 
     .photography .slider ul.slick-dots.slick-thumb li:last-child {
         text-align: left;
         text-indent: 5%;
         flex: 1;
+        flex-basis: 50%;
+
     }
 }
 

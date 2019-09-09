@@ -65,10 +65,16 @@ class Navigation extends Component {
                 <div>
                   <ul>
                     <li className={`hk-bold-font`}>
-                      <Link to="/about">About</Link>
+                      {/* <Link to="/about">About</Link> */}
+                      <AniLink paintDrip to="/about" hex="#fccdb4">
+                        About
+                      </AniLink>
                     </li>
                     <li className={`hk-bold-font`}>
-                      <Link to="/wedding">Weddings</Link>
+                      {/* <Link to="/wedding">Weddings</Link> */}
+                      <AniLink paintDrip to="/wedding" hex="#fccdb4">
+                        Weddings
+                      </AniLink>
                     </li>
                   </ul>
                 </div>

@@ -7,30 +7,18 @@ class Container extends Component {
     super(props)
     this.state = {
       loading: true,
-      currentPage: null,
     }
   }
 
   componentDidMount() {
     // this simulates an async action, after which the component will render the content
-    onWaiting().then(() => this.setState({ loading: false }))
+    // onWaiting().then(() => this.setState({ loading: false }))
   }
 
   render() {
     const { children } = this.props
 
-    const { loading } = this.state
-
-    if (loading) {
-      // if your component doesn't have to wait for an async action, remove this block
-      return null // render null when app is not ready
-    }
-
-    return (
-      <div className={`container ${this.state.loading ? '' : 'ready'}`}>
-        {children}
-      </div>
-    )
+    return <>{children}</>
   }
 }
 
