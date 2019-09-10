@@ -101,7 +101,12 @@ ul.slick-dots.slick-thumb li.slick-active {
 } */
 
 @media screen and (max-width: 767px) {
+    .section.hero .slick-slide .wrapper {
+        margin-top: -150px;
+    }
+
     ul.slick-dots.slick-thumb {
         width: calc(100% - 50px);
+        bottom: 150px;
     }
 }

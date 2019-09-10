@@ -77,7 +77,7 @@ class WeddingPostTemplate extends React.Component {
       dotsClass: 'slick-dots slick-thumb',
       swipeToSlide: true,
       infinite: true,
-      autoplay: false,
+      autoplay: true,
       autoplaySpeed: 4000,
       speed: 900,
       slidesToShow: 1,
@@ -105,8 +105,9 @@ class WeddingPostTemplate extends React.Component {
                 loop
                 preload="true"
                 playsInline
+                webkit-playsinline="true"
                 autoPlay
-                muted
+                muted="true"
               >
                 <source src={`/${currentPost.slug}.mp4`} type="video/mp4" />
                 <source src={`/${currentPost.slug}.ogg`} type="video/ogg" />

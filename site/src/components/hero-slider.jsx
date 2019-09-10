@@ -39,9 +39,10 @@ class HeroSlider extends React.Component {
                   poster={`${item.slug}-poster.jpg`}
                   loop
                   preload="true"
-                  playsinline
+                  playsInline
+                  webkit-playsinline="true"
                   autoPlay
-                  muted
+                  muted="true"
                 >
                   <source src={`${item.slug}.mp4`} type="video/mp4" />
                   <source src={`${item.slug}.ogg`} type="video/ogg" />

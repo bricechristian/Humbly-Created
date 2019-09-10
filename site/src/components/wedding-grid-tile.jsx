@@ -46,11 +46,7 @@ class WeddingGridTile extends Component {
         onMouseEnter={() => this.animateGIF()}
         onMouseLeave={() => this.staticGIF()}
       >
-        <span
-          className={`image-container ${
-            this.state.didImageLoad ? '' : 'blurred'
-          }`}
-        >
+        <span className={`image-container`}>
           {this.state.didImageLoad ? (
             <img src={`/${detail.slug}${this.state.src}`} />
           ) : (

@@ -52,9 +52,24 @@ body.open {
   font-weight: normal;
   font-style: normal;
   text-decoration: none;
+  position: relative;
   /* -webkit-transition: .3s;
   -o-transition: .3s;
   transition: .3s; */
+}
+
+#header ul li a:after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  height: 66%;
+  width: 95%;
+  top: 9px;
+  left: 6px;
+  z-index: -1;
+  background: transparent;
+  -webkit-transition: .3s;
+  transition: .3s;
 }
 
 #header .logo {
@@ -211,6 +226,12 @@ body.open {
   -webkit-transform: translateY(-7px) translateX(1px) rotate(-45deg);
   -ms-transform: translateY(-7px) translateX(1px) rotate(-45deg);
   transform: translateY(-7px) translateX(1px) rotate(-45deg);
+}
+
+@media screen and (min-width: 768px) {
+  #header ul li a:hover:after {
+    background: #fcccb4;
+  }
 }
 
 @media screen and (max-width: 767px) {
