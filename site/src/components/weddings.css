@@ -415,4 +415,9 @@
         grid-template-columns: 1fr;
         grid-gap: 3%;
     }
+
+    .photography ul.slick-dots.slick-thumb li.slick-active {
+        flex-basis: 75%;
+        width: 75%;
+    }
 }

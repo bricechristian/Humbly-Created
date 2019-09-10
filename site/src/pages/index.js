@@ -47,7 +47,7 @@ class RootIndex extends React.Component {
 
     return (
       <Layout location={this.props.location}>
-        <SEO />
+        <SEO homePath={this.props.path} />
         <div className="page" id="home">
           <Navigation />
           <div className={`section hero flex align-center pink-bg`}>

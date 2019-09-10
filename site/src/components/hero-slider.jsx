@@ -1,6 +1,7 @@
 import React from 'react'
 import get from 'lodash/get'
 import AniLink from 'gatsby-plugin-transition-link/AniLink'
+import { Link } from 'gatsby'
 import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
@@ -55,14 +56,12 @@ class HeroSlider extends React.Component {
               >
                 Watch More
               </a> */}
-              <AniLink
-                paintDrip
+              <Link
                 to={`wedding/${item.slug}`}
                 className={`uppercase hk-bold-font white-color`}
-                hex="#fccdb4"
               >
                 Watch More
-              </AniLink>
+              </Link>
             </div>
           )
         })}
