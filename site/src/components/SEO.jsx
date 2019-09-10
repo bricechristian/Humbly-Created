@@ -24,9 +24,14 @@ const SEO = ({ title, description, image, pathname, article }) => (
         url: `${siteUrl}${pathname || '/'}`,
       }
 
+      // console.log(window.location.pathname)
+
       return (
         <>
-          <Helmet title={seo.title} titleTemplate={titleTemplate}>
+          <Helmet
+            title={seo.title}
+            titleTemplate={window.location.pathname == '/' ? '' : titleTemplate}
+          >
             <meta name="description" content={seo.description} />
             <meta name="image" content={seo.image} />
             {seo.url && <meta property="og:url" content={seo.url} />}
@@ -38,6 +43,12 @@ const SEO = ({ title, description, image, pathname, article }) => (
               <meta property="og:description" content={seo.description} />
             )}
             {seo.image && <meta property="og:image" content={seo.image} />}
+            <meta name="twitter:card" content="summary_large_image" />
+            {seo.title && <meta name="twitter:title" content={seo.title} />}
+            {seo.description && (
+              <meta name="twitter:description" content={seo.description} />
+            )}
+            {seo.image && <meta name="twitter:image" content={seo.image} />}
           </Helmet>
         </>
       )

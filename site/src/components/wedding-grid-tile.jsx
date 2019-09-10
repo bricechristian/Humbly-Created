@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import AniLink from 'gatsby-plugin-transition-link/AniLink'
 import get from 'lodash/get'
 
 class WeddingGridTile extends Component {
@@ -37,8 +38,9 @@ class WeddingGridTile extends Component {
     }
 
     return (
-      <a
-        href={`/wedding/${detail.slug}`}
+      <AniLink
+        to={`/wedding/${detail.slug}`}
+        hex="#fccdb4"
         key={detail.slug}
         className={`center-text ${this.state.hover}`}
         onMouseEnter={() => this.animateGIF()}
@@ -63,7 +65,7 @@ class WeddingGridTile extends Component {
           />
           {/* <img src={`/${detail.slug}-still.gif`} alt="" /> */}
         </span>
-      </a>
+      </AniLink>
     )
   }
 }

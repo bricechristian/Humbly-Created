@@ -768,6 +768,10 @@ form label.slideUp {
   transition: 1s;
 }
 
+.bg-fade.fade-in {
+  opacity: 1;
+}
+
 .video-container {
   overflow: hidden;
   position: absolute;

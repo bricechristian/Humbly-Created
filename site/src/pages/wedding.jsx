@@ -41,7 +41,7 @@ class WeddingIndex extends React.Component {
 
     return (
       <Layout location={this.props.location}>
-        <SEO />
+        <SEO title={`Weddings`} />
         <div className="page" id="weddings">
           <Navigation />
           <div className={`section hero`}>

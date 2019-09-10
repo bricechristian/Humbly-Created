@@ -38,7 +38,7 @@ class HeroSlider extends React.Component {
                   poster={`${item.slug}-poster.jpg`}
                   loop
                   preload="true"
-                  playsInline
+                  playsinline
                   autoPlay
                   muted
                 >

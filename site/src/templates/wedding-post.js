@@ -17,7 +17,7 @@ class WeddingPostTemplate extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      bgAnimate: '',
+      bgAnimate: false,
     }
   }
 
@@ -25,18 +25,13 @@ class WeddingPostTemplate extends React.Component {
     window.addEventListener('scroll', this.handleScroll.bind(this))
   }
 
-  // componentWillUnmount() {
-  //   window.removeEventListener('scroll', this.handleScroll.bind(this))
-  // }
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.handleScroll.bind(this))
+  }
 
   handleScroll(event) {
-    let scrollTop = event.srcElement.body.scrollTop,
-      itemTranslate = (scrollTop + 1) * 1.00
-
-    // console.log(itemTranslate)
-
     this.setState({
-      bgAnimate: itemTranslate,
+      bgAnimate: true,
     })
   }
 
@@ -52,10 +47,6 @@ class WeddingPostTemplate extends React.Component {
         // https://developers.google.com/youtube/player_parameters
         autoplay: 0,
       },
-    }
-
-    const bgStyle = {
-      opacity: this.state.bgAnimate,
     }
 
     function getUnique(arr, comp) {
@@ -96,14 +87,18 @@ class WeddingPostTemplate extends React.Component {
 
     return (
       <Layout location={this.props.location}>
-        <SEO />
+        <SEO title={`${currentPost.title}`} />
         <div className={`page`}>
           <Navigation />
           <div className={`section hero flex align-center justify-center`}>
             <div className={'wrapper'}>
               <h1 className={`white-color shadow`}> {currentPost.title} </h1>
             </div>
-            <div className={`bg-fade pink-bg`} style={bgStyle}></div>
+            <div
+              className={`bg-fade pink-bg ${
+                this.state.bgAnimate ? 'fade-in' : ''
+              }`}
+            ></div>
             <div className={`video-container`}>
               <video
                 className={`background-video`}

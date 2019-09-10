@@ -68,7 +68,7 @@ ul.slick-dots.slick-thumb a {
 ul.slick-dots.slick-thumb li {
     transition: .5s;
     height: auto !important;
-    line-height: .9 !important;
+    line-height: 1.2 !important;
 }
 
 ul.slick-dots.slick-thumb li.slick-active {
@@ -99,3 +99,9 @@ ul.slick-dots.slick-thumb li.slick-active {
 .wedding-menu ul {
     list-style: none;
 } */
+
+@media screen and (max-width: 767px) {
+    ul.slick-dots.slick-thumb {
+        width: calc(100% - 50px);
+    }
+}

@@ -212,3 +212,10 @@ body.open {
   -ms-transform: translateY(-7px) translateX(1px) rotate(-45deg);
   transform: translateY(-7px) translateX(1px) rotate(-45deg);
 }
+
+@media screen and (max-width: 767px) {
+  #header ul li a {
+    font-size: 8vw;
+    line-height: 1;
+  }
+}

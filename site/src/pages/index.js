@@ -2,7 +2,6 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import get from 'lodash/get'
 import SEO from '../components/SEO'
-// import PageTransition from 'gatsby-plugin-page-transitions'
 import Navigation from '../components/navigation'
 import Layout from '../components/layout'
 import Footer from '../components/footer'
@@ -45,7 +44,6 @@ class RootIndex extends React.Component {
     }))
 
     const uniqueArr = getUnique(arr, 'title')
-    // console.log(uniqueArr)
 
     return (
       <Layout location={this.props.location}>
@@ -91,7 +89,7 @@ export const pageQuery = graphql`
         title
       }
     }
-    allContentfulWedding(sort: { fields: [date], order: DESC }) {
+    allContentfulWedding(sort: { fields: [date], order: DESC }, limit: 4) {
       edges {
         node {
           title

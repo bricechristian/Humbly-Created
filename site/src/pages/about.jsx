@@ -11,10 +11,9 @@ import '../components/about.css'
 class AboutIndex extends React.Component {
   render() {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title')
-
     return (
       <Layout location={this.props.location}>
-        <SEO />
+        <SEO title={`About`} />
         <div className="page" id="about">
           <Navigation />
           <div className={`section hero`}>

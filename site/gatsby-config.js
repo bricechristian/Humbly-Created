@@ -21,8 +21,8 @@ if (!spaceId || !accessToken) {
 
 module.exports = {
   siteMetadata: {
-    title: 'Humbly Created Co.',
-    titleTemplate: "%s | Charleston Wedding Videography",
+    title: 'Humbly Created Co. | Charleston Wedding Videography',
+    titleTemplate: "%s | Humbly Created Co.",
     description: "Humbly Created Co. is a Charleston wedding videography group specializing in making moments last a lifetime.",
     url: "https://inspiring-swanson-769324.netlify.com", // No trailing slash allowed!
     image: "/og-image.jpg", // Path to your image you placed in the 'static' folder
