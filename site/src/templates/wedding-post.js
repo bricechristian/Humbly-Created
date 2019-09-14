@@ -16,23 +16,6 @@ import '../components/weddings.css'
 class WeddingPostTemplate extends React.Component {
   constructor(props) {
     super(props)
-    this.state = {
-      bgAnimate: false,
-    }
-  }
-
-  componentDidMount() {
-    window.addEventListener('scroll', this.handleScroll.bind(this))
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener('scroll', this.handleScroll.bind(this))
-  }
-
-  handleScroll(event) {
-    this.setState({
-      bgAnimate: true,
-    })
   }
 
   render() {
@@ -94,11 +77,7 @@ class WeddingPostTemplate extends React.Component {
             <div className={'wrapper'}>
               <h1 className={`white-color shadow`}> {currentPost.title} </h1>
             </div>
-            <div
-              className={`bg-fade pink-bg ${
-                this.state.bgAnimate ? 'fade-in' : ''
-              }`}
-            ></div>
+            <div className={`bg-fade pink-bg`}></div>
             <div className={`video-container`}>
               <video
                 className={`background-video`}
@@ -107,6 +86,7 @@ class WeddingPostTemplate extends React.Component {
                 autoPlay
                 playsInline
                 preload={'auto'}
+                poster={`${currentPost.slug}-poster.jpg`}
               >
                 <source src={`/${currentPost.slug}.mp4`} type="video/mp4" />
                 <source src={`/${currentPost.slug}.ogg`} type="video/ogg" />
@@ -139,7 +119,7 @@ class WeddingPostTemplate extends React.Component {
                   <p> Photography By: </p>
                   <a
                     href={currentPost.photographer_website}
-                    className={`hk-bold-font`}
+                    className={`hk-bold-font shadow`}
                     target="_blank"
                   >
                     {currentPost.photographer_name}

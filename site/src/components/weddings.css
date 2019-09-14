@@ -137,6 +137,10 @@
     padding-bottom: 45px;
 }
 
+.photography .photographer a {
+    text-decoration: none;
+}
+
 .photography .slider {
     width: 50%;
     flex: 2;
