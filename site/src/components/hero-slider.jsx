@@ -49,7 +49,6 @@ class HeroSlider extends React.Component {
                   }}
                 >
                   <source src={`${item.slug}.mp4`} type="video/mp4" />
-                  <source src={`${item.slug}.ogg`} type="video/ogg" />
                 </video>
                 {/* <Player
                   className={`background-video`}

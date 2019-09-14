@@ -89,7 +89,6 @@ class WeddingPostTemplate extends React.Component {
                 poster={`${currentPost.slug}-poster.jpg`}
               >
                 <source src={`/${currentPost.slug}.mp4`} type="video/mp4" />
-                <source src={`/${currentPost.slug}.ogg`} type="video/ogg" />
               </video>
             </div>
           </div>
