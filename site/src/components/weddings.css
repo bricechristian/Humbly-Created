@@ -420,4 +420,8 @@
         flex-basis: 75%;
         width: 75%;
     }
+
+    #footer .section {
+        padding: 20% 0 10%;
+    }
 }

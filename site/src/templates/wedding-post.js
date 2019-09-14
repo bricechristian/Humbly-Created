@@ -103,11 +103,10 @@ class WeddingPostTemplate extends React.Component {
               <video
                 className={`background-video`}
                 loop
-                preload="true"
-                playsInline
-                webkit-playsinline="true"
+                muted
                 autoPlay
-                muted="true"
+                playsInline
+                preload={'auto'}
               >
                 <source src={`/${currentPost.slug}.mp4`} type="video/mp4" />
                 <source src={`/${currentPost.slug}.ogg`} type="video/ogg" />

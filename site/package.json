@@ -32,7 +32,8 @@
     "react-youtube": "^7.9.0",
     "sharp": "^0.22.0",
     "slick-carousel": "^1.8.1",
-    "styled-components": "^4.3.2"
+    "styled-components": "^4.3.2",
+    "video-react": "^0.14.1"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.1",

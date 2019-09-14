@@ -3,8 +3,10 @@ import get from 'lodash/get'
 import AniLink from 'gatsby-plugin-transition-link/AniLink'
 import { Link } from 'gatsby'
 import Slider from 'react-slick'
+import { Player } from 'video-react'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
+// import './video-react.css'
 import './hero-slider.css'
 
 class HeroSlider extends React.Component {
@@ -26,7 +28,7 @@ class HeroSlider extends React.Component {
     }
     const posts = get(this.props, 'weddings')
 
-    // console.log(posts)
+    console.log(this.props)
 
     return (
       <Slider {...settings}>
@@ -38,15 +40,26 @@ class HeroSlider extends React.Component {
                   className={`background-video`}
                   poster={`${item.slug}-poster.jpg`}
                   loop
-                  preload="true"
-                  playsInline
-                  webkit-playsinline="true"
+                  muted
                   autoPlay
-                  muted="true"
+                  playsInline
+                  preload={'auto'}
+                  onCanPlayThrough={() => {
+                    this.props.loadingIsFinished()
+                  }}
                 >
                   <source src={`${item.slug}.mp4`} type="video/mp4" />
                   <source src={`${item.slug}.ogg`} type="video/ogg" />
                 </video>
+                {/* <Player
+                  className={`background-video`}
+                  playsInline
+                  autoPlay
+                  preload="auto"
+                  muted
+                  poster={`${item.slug}-poster.jpg`}
+                  src={`${item.slug}.mp4`}
+                /> */}
               </div>
               <div className={`wrapper`}>
                 <h2 className={`white-color shadow`}>{item.title}</h2>
@@ -58,7 +71,7 @@ class HeroSlider extends React.Component {
                 Watch More
               </a> */}
               <Link
-                to={`wedding/${item.slug}`}
+                to={`/wedding/${item.slug}`}
                 className={`uppercase hk-bold-font white-color`}
               >
                 Watch More

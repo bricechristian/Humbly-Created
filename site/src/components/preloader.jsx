@@ -1,7 +1,14 @@
-class Preloader extends Component {
+import React from 'react'
+import './preloader.css'
+
+class Preloader extends React.Component {
   state = {}
   render() {
-    return <>Preloader</>
+    return (
+      <div className={`preloader ${this.props.isLoading ? '' : 'hidden'}`}>
+        Preloader
+      </div>
+    )
   }
 }
 

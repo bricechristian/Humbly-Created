@@ -4,17 +4,23 @@ import get from 'lodash/get'
 import SEO from '../components/SEO'
 import Navigation from '../components/navigation'
 import Layout from '../components/layout'
+import Preloader from '../components/Preloader'
 import Footer from '../components/footer'
 import HeroSlider from '../components/hero-slider'
 
 class RootIndex extends React.Component {
   constructor(props) {
     super(props)
+    this.state = {
+      isLoading: true,
+    }
   }
 
-  pageIsWaiting = () => {
-    // console.log(`it's ready`)
-    this.setState({ loading: false })
+  loadingIsFinished = () => {
+    setTimeout(() => {
+      this.setState({ isLoading: false })
+    }, 1500)
+    console.log('video finished loading!')
   }
 
   componentDidMount() {
@@ -45,9 +51,12 @@ class RootIndex extends React.Component {
 
     const uniqueArr = getUnique(arr, 'title')
 
+    const { isLoading } = this.state
+
     return (
       <Layout location={this.props.location}>
         <SEO homePath={this.props.path} />
+        <Preloader isLoading={isLoading} />
         <div className="page" id="home">
           <Navigation />
           <div className={`section hero flex align-center pink-bg`}>
@@ -57,7 +66,10 @@ class RootIndex extends React.Component {
                 I’ m Brice.I’ m a web - developer and videographer with a love for
                 all things creative based out of Charleston, South Carolina.
               </h2> */}
-              <HeroSlider weddings={uniqueArr} />
+              <HeroSlider
+                weddings={uniqueArr}
+                loadingIsFinished={this.loadingIsFinished}
+              />
             </div>
             {/* <div className={`wedding-menu`}>
               <div className="wrapper">

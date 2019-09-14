@@ -201,6 +201,15 @@
 
 @media screen and (max-width: 480px) {
 
+    table th {
+        font-size: 5vw;
+    }
+
+    table thead span.price {
+        font-size: 4vw;
+        margin-top: 8px;
+    }
+
     table thead th {
         padding: 25px 15px;
     }
