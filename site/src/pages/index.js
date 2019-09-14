@@ -4,7 +4,7 @@ import get from 'lodash/get'
 import SEO from '../components/SEO'
 import Navigation from '../components/navigation'
 import Layout from '../components/layout'
-import Preloader from '../components/Preloader'
+import Preloader from '../components/preloader'
 import Footer from '../components/footer'
 import HeroSlider from '../components/hero-slider'
 
