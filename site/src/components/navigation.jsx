@@ -16,7 +16,7 @@ class Navigation extends Component {
 
   openMenu(e) {
     e.preventDefault()
-    console.log('clicked')
+    // console.log('clicked')
     this.setState(state => ({
       isMenuOpen: !state.isMenuOpen,
     }))

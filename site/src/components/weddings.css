@@ -378,13 +378,13 @@
 
     .photography .slider ul.slick-dots.slick-thumb li.slick-active:last-child {
         display: flex;
-        bottom: 5px;
+        bottom: 0;
     }
 
     .photography .slider ul.slick-dots.slick-thumb li.slick-active:last-child a {
-        flex: 0 auto;
+        flex: 0 1 auto;
         position: relative;
-        left: 0;
+        left: 7%;
         width: 45%;
         flex-basis: 45%;
     }
@@ -396,7 +396,7 @@
         margin: 0 5px;
         position: relative;
         top: 2px;
-        left: -5px;
+        left: 6%;
         flex-basis: 55%;
         width: 55%;
     }
