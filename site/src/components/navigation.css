@@ -228,13 +228,13 @@ body.open {
   transform: translateY(-7px) translateX(1px) rotate(-45deg);
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 861px) {
   #header ul li a:hover:after {
     background: #fcccb4;
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 860px) {
   #header ul li a {
     font-size: 8vw;
     line-height: 1;

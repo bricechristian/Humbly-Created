@@ -28,14 +28,15 @@ class HeroSlider extends React.Component {
     }
     const posts = get(this.props, 'weddings')
 
-    console.log(this.props)
-
     return (
       <Slider {...settings}>
         {posts.map(item => {
+          const bgImage = {
+            background: `url(${item.slug}-poster.jpg)`,
+          }
           return (
             <div key={item.slug}>
-              <div className={`video-container`}>
+              <div className={`video-container show_767`}>
                 <video
                   className={`background-video`}
                   poster={`${item.slug}-poster.jpg`}
@@ -60,6 +61,10 @@ class HeroSlider extends React.Component {
                   src={`${item.slug}.mp4`}
                 /> */}
               </div>
+              <div
+                className={`image-container bg hide_767`}
+                style={bgImage}
+              ></div>
               <div className={`wrapper`}>
                 <h2 className={`white-color shadow`}>{item.title}</h2>
               </div>
@@ -73,7 +78,7 @@ class HeroSlider extends React.Component {
                 to={`/wedding/${item.slug}`}
                 className={`uppercase hk-bold-font white-color`}
               >
-                Watch More
+                Watch Full Video
               </Link>
             </div>
           )

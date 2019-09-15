@@ -44,6 +44,11 @@ body {
   overflow-x: hidden;
 }
 
+.frozen {
+  height: 100vh;
+  overflow: hidden;
+}
+
 h1 {
   font-family: "HKBold", sans-serif;
   font-weight: normal;
@@ -686,7 +691,8 @@ form label.slideUp {
   opacity: 1;
 }
 
-.video-container {
+.video-container,
+.image-container {
   overflow: hidden;
   position: absolute;
   top: 0;
@@ -695,7 +701,12 @@ form label.slideUp {
   height: 100%;
 }
 
-.video-container:before {
+.image-container {
+  width: 100vw;
+}
+
+.video-container:before,
+.image-container:before {
   position: absolute;
   content: " ";
   top: 0;
@@ -704,7 +715,7 @@ form label.slideUp {
   height: 100%;
   display: block;
   z-index: 1;
-  background-color: rgba(43, 43, 43, 0.25);
+  background-color: rgba(43, 43, 43, 0.35);
 }
 
 .background-video {
@@ -766,13 +777,13 @@ form label.slideUp {
 
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 861px) {
   .hide_767 {
     display: none !important;
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 860px) {
   .show_767 {
     display: none !important;
   }
@@ -797,6 +808,10 @@ form label.slideUp {
 
   #home .section.hero h2 {
     font-size: 8vw;
+  }
+
+  .page:not(#home) .section.hero .wrapper {
+    padding-bottom: 20%;
   }
 }
 

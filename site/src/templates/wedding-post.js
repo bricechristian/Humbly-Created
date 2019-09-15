@@ -68,6 +68,10 @@ class WeddingPostTemplate extends React.Component {
       pauseOnHover: false,
     }
 
+    const bgImage = {
+      background: `url(/${currentPost.slug}-poster.jpg)`,
+    }
+
     return (
       <Layout location={this.props.location}>
         <SEO title={`${currentPost.title}`} />
@@ -78,7 +82,7 @@ class WeddingPostTemplate extends React.Component {
               <h1 className={`white-color shadow`}> {currentPost.title} </h1>
             </div>
             <div className={`bg-fade pink-bg`}></div>
-            <div className={`video-container`}>
+            <div className={`video-container show_767`}>
               <video
                 className={`background-video`}
                 loop
@@ -86,11 +90,14 @@ class WeddingPostTemplate extends React.Component {
                 autoPlay
                 playsInline
                 preload={'auto'}
-                poster={`${currentPost.slug}-poster.jpg`}
               >
                 <source src={`/${currentPost.slug}.mp4`} type="video/mp4" />
               </video>
             </div>
+            <div
+              className={`image-container bg hide_767`}
+              style={bgImage}
+            ></div>
           </div>
           <div className={`section main`}>
             <div className={`wrapper md center-text`}>

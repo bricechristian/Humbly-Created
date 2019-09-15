@@ -20,6 +20,10 @@
     font-size: 60px;
 }
 
+.page#about .section.hero .wrapper {
+    padding-bottom: 0;
+}
+
 #about .me {
     padding-top: 0;
 }
@@ -59,6 +63,8 @@
 
 #about .me .image .image-container {
     position: relative;
+    width: 100%;
+
 }
 
 #about .me .image .image-container:after {
@@ -125,7 +131,7 @@
 
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 860px) {
 
     #about .hero h1 {
         font-size: 8vw;
@@ -159,21 +165,16 @@
         padding-top: 10%;
     }
 
+    #about .me .text .inner p {
+        font-size: 5vw;
+    }
+
     #about .me .image .inner {
         padding: 10%;
     }
 
     #about .me .text .inner {
         padding: 0;
-    }
-
-    #about .me .text .inner p {
-        font-size: 24px;
-    }
-
-
-    #about .me .text .inner p.name {
-        font-size: 14px;
     }
 
     #about .me .text .inner p.name:before {
@@ -196,6 +197,17 @@
 
     #about table:first-child {
         margin-top: 0;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #about .me .text .inner p {
+        font-size: 24px;
+    }
+
+
+    #about .me .text .inner p.name {
+        font-size: 14px;
     }
 }
 
