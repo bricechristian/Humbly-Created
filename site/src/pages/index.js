@@ -56,22 +56,23 @@ class RootIndex extends React.Component {
     return (
       <Layout location={this.props.location}>
         <SEO homePath={this.props.path} />
-        <Preloader isLoading={isLoading} />
-        <div className="page" id="home">
-          <Navigation />
-          <div className={`section hero flex align-center pink-bg`}>
-            <div className={`wrapper full center-text`}>
-              {/* <h1 className="section-headline">Humbly Created Co.</h1> */}
-              {/* <h2 className={`blue-color`}>
+        <div className={`frozen`}>
+          <Preloader isLoading={isLoading} />
+          <div className="page" id="home">
+            <Navigation />
+            <div className={`section hero flex align-center pink-bg`}>
+              <div className={`wrapper full center-text`}>
+                {/* <h1 className="section-headline">Humbly Created Co.</h1> */}
+                {/* <h2 className={`blue-color`}>
                 I’ m Brice.I’ m a web - developer and videographer with a love for
                 all things creative based out of Charleston, South Carolina.
               </h2> */}
-              <HeroSlider
-                weddings={uniqueArr}
-                loadingIsFinished={this.loadingIsFinished}
-              />
-            </div>
-            {/* <div className={`wedding-menu`}>
+                <HeroSlider
+                  weddings={uniqueArr}
+                  loadingIsFinished={this.loadingIsFinished}
+                />
+              </div>
+              {/* <div className={`wedding-menu`}>
               <div className="wrapper">
                 <ul className="flex">
                   {uniqueArr.map(item => {
@@ -84,8 +85,9 @@ class RootIndex extends React.Component {
                 </ul>
               </div>
             </div> */}
+            </div>
+            <Footer />
           </div>
-          <Footer />
         </div>
       </Layout>
     )

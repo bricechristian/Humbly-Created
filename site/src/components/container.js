@@ -10,11 +10,7 @@ class Container extends Component {
   render() {
     const { children } = this.props
 
-    return (
-      <div className={window.location.pathname == '/' ? 'frozen' : ''}>
-        {children}
-      </div>
-    )
+    return <>{children}</>
   }
 }
 
