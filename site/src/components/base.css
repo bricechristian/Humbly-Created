@@ -692,21 +692,21 @@ form label.slideUp {
 }
 
 .video-container,
-.image-container {
+.hero .image-container {
   overflow: hidden;
-  position: absolute;
+  position: absolute !important;
   top: 0;
   z-index: -3;
   width: 100%;
   height: 100%;
 }
 
-.image-container {
+.hero .image-container {
   width: 100vw;
 }
 
 .video-container:before,
-.image-container:before {
+.hero .image-container:before {
   position: absolute;
   content: " ";
   top: 0;

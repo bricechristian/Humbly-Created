@@ -32,14 +32,14 @@ class HeroSlider extends React.Component {
       <Slider {...settings}>
         {posts.map(item => {
           const bgImage = {
-            background: `url(${item.slug}-poster.jpg)`,
+            background: `url(/${item.slug}-poster.jpg)`,
           }
           return (
             <div key={item.slug}>
               <div className={`video-container show_767`}>
                 <video
                   className={`background-video`}
-                  poster={`${item.slug}-poster.jpg`}
+                  poster={`/${item.slug}-poster.jpg`}
                   loop
                   muted
                   autoPlay
