@@ -141,6 +141,10 @@
     text-decoration: none;
 }
 
+.photography .photographer a.shadow:after {
+    top: 50%;
+}
+
 .photography .slider {
     width: 50%;
     flex: 2;

@@ -19,7 +19,7 @@ class RootIndex extends React.Component {
   loadingIsFinished = () => {
     setTimeout(() => {
       this.setState({ isLoading: false })
-    }, 1500)
+    }, 500)
     console.log('video finished loading!')
   }
 

@@ -20,7 +20,7 @@ class HeroSlider extends React.Component {
       infinite: true,
       swipeToSlide: false,
       autoplay: true,
-      autoplaySpeed: 12200,
+      autoplaySpeed: 4500,
       speed: 900,
       slidesToShow: 1,
       slidesToScroll: 1,
