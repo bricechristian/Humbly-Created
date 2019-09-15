@@ -75,7 +75,7 @@ class WeddingPostTemplate extends React.Component {
     return (
       <Layout location={this.props.location}>
         <SEO title={`${currentPost.title}`} />
-        <div className={`page`}>
+        <div className={`page single`}>
           <Navigation />
           <div className={`section hero flex align-center justify-center`}>
             <div className={'wrapper'}>

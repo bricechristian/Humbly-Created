@@ -758,6 +758,12 @@ form label.slideUp {
 
 #home .section.hero {
   padding: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
 }
 
 #home #footer {
@@ -811,7 +817,7 @@ form label.slideUp {
   }
 
   .page:not(#home) .section.hero .wrapper {
-    padding-bottom: 20%;
+    /* padding-bottom: 20%; */
   }
 }
 
