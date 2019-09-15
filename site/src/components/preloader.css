@@ -16,3 +16,83 @@
     opacity: 0;
     z-index: -9;
 }
+
+.blink {
+    animation: blink-animation 1s steps(5, start) infinite;
+    -webkit-animation: blink-animation 1s steps(5, start) infinite;
+}
+
+@keyframes blink-animation {
+    to {
+        visibility: hidden;
+    }
+}
+
+@-webkit-keyframes blink-animation {
+    to {
+        visibility: hidden;
+    }
+}
+
+.preloader .wrapper {
+    height: calc(100% - 100px);
+    margin: 50px;
+    width: calc(100% - 100px);
+}
+
+.preloader .border.wrapper {
+    border: 4px solid white;
+    z-index: 0;
+}
+
+.preloader .border.wrapper:after {
+    content: "";
+    display: inline-block;
+    background: #fcccb4;
+    width: calc(100% + 10px);
+    height: calc(100% - 100px);
+    position: absolute;
+    top: 50px;
+    left: -5px;
+}
+
+.preloader .border.wrapper:before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: calc(100% - 100px);
+    height: calc(100% + 10px);
+    background: #fcccb4;
+    top: -5px;
+}
+
+.preloader .text .play {
+    position: absolute;
+    left: 25px;
+    top: 25px;
+}
+
+.preloader .text.wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    font-size: 60px;
+}
+
+.preloader .text .time {
+    position: absolute;
+    right: 25px;
+    bottom: 25px;
+}
+
+.preloader .text .hours:after,
+.preloader .text .minutes:after {
+    content: ":";
+}
+
+@media screen and (max-width: 600px) {
+    .preloader .text.wrapper {
+        font-size: 10vw;
+    }
+}

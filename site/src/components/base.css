@@ -7,7 +7,9 @@ Pink: #fcccb3
 
 /* Fonts
 ------------------
-
+HK Bold
+HK Medium
+VCR Font
 ------------------
 */
 
@@ -33,6 +35,14 @@ Pink: #fcccb3
   font-style: normal;
   src: url('/HKGrotesk-Semibold.woff2') format('woff2'),
     url('/HKGrotesk-Semibold.woff') format('woff');
+}
+
+@font-face {
+  font-family: "VCR";
+  font-weight: normal;
+  font-style: normal;
+  src: url('/vcr.woff2') format('woff2'),
+    url('/vcr.woff') format('woff');
 }
 
 body {
@@ -111,6 +121,12 @@ p {
 
 .hk-bold-font {
   font-family: "HKBold";
+  font-weight: normal;
+  font-style: normal;
+}
+
+.vcr-font {
+  font-family: "VCR";
   font-weight: normal;
   font-style: normal;
 }

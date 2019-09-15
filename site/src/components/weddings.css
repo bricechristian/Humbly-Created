@@ -128,10 +128,6 @@
     margin-right: 5px;
 }
 
-.single .hero .wrapper {
-    padding-bottom: 20%;
-}
-
 .main .wrapper .details {
     padding: 50px 0;
 }
@@ -303,6 +299,10 @@
 
     #weddings .hero {
         padding: 25px 0;
+    }
+
+    .single .hero .wrapper {
+        padding-bottom: 20%;
     }
 
     #weddings .flex.grid {
