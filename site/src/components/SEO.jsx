@@ -24,8 +24,6 @@ const SEO = ({ homePath, title, description, image, pathname, article }) => (
         url: `${siteUrl}${pathname || '/'}`,
       }
 
-      // console.log(homePath)
-
       return (
         <>
           <Helmet

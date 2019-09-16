@@ -56,7 +56,6 @@ class HeroSlider extends React.Component {
                   <div className={`video-container show_767`}>
                     <video
                       className={`background-video`}
-                      poster={`/${item.slug}-poster.jpg`}
                       loop
                       muted
                       autoPlay
