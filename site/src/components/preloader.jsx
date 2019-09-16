@@ -67,6 +67,7 @@ class Preloader extends React.Component {
               {sec < 10 && '0'}
               {sec}
             </span>
+            <span className={`tod`}>{hrs > 11 ? 'PM' : 'AM'}</span>
           </span>
         </div>
       </div>

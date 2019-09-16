@@ -290,7 +290,7 @@
 @media screen and (max-width: 860px) {
 
     .section.hero .slick-slider .slick-slide a {
-        width: calc(100% - 50px);
+        width: calc(100% - 50px) !important;
     }
 
     #weddings .hero h1 {
