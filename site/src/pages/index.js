@@ -19,7 +19,7 @@ class RootIndex extends React.Component {
   loadingIsFinished = () => {
     setTimeout(() => {
       this.setState({ isLoading: false })
-    }, 1000)
+    }, 2000)
   }
 
   render() {
@@ -57,29 +57,12 @@ class RootIndex extends React.Component {
             <Navigation />
             <div className={`section hero flex align-center pink-bg`}>
               <div className={`wrapper full center-text`}>
-                {/* <h1 className="section-headline">Humbly Created Co.</h1> */}
-                {/* <h2 className={`blue-color`}>
-                I’ m Brice.I’ m a web - developer and videographer with a love for
-                all things creative based out of Charleston, South Carolina.
-              </h2> */}
                 <HeroSlider
                   weddings={uniqueArr}
                   loadingIsFinished={this.loadingIsFinished}
+                  wait={500}
                 />
               </div>
-              {/* <div className={`wedding-menu`}>
-              <div className="wrapper">
-                <ul className="flex">
-                  {uniqueArr.map(item => {
-                    return (
-                      <li key={item.slug}>
-                        <a href={`wedding/${item.slug}`}> {item.title} </a>
-                      </li>
-                    )
-                  })}
-                </ul>
-              </div>
-            </div> */}
             </div>
             <Footer />
           </div>

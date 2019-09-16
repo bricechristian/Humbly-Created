@@ -32,6 +32,7 @@ class Preloader extends React.Component {
   }
 
   componentDidMount() {
+    this.updateTime()
     this.interval = setInterval(() => {
       this.updateTime()
     }, 1000)

@@ -1,5 +1,5 @@
 .preloader {
-    position: fixed;
+    position: absolute;
     z-index: 99999999999;
     background: #fcccb3;
     color: white;
