@@ -11,10 +11,10 @@ class Navigation extends Component {
       isMenuOpen: false,
     }
 
-    this.openMenu = this.openMenu.bind(this)
+    // this.openMenu = this.openMenu.bind(this)
   }
 
-  openMenu(e) {
+  openMenu = e => {
     e.preventDefault()
     // console.log('clicked')
     this.setState(state => ({
@@ -24,6 +24,12 @@ class Navigation extends Component {
       document.body.classList.remove('open')
     } else {
       document.body.classList.add('open')
+    }
+  }
+
+  closeMenu = e => {
+    if (this.state.isMenuOpen) {
+      document.body.classList.remove('open')
     }
   }
 
@@ -64,10 +70,10 @@ class Navigation extends Component {
               <div className={`flex align-center justify-center`}>
                 <div>
                   <ul>
-                    <li className={`hk-bold-font`}>
+                    <li className={`hk-bold-font`} onClick={this.closeMenu}>
                       <Link to="/about">About</Link>
                     </li>
-                    <li className={`hk-bold-font`}>
+                    <li className={`hk-bold-font`} onClick={this.closeMenu}>
                       <Link to="/wedding">Weddings</Link>
                     </li>
                   </ul>
