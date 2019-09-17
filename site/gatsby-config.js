@@ -37,6 +37,12 @@ module.exports = {
       options: contentfulConfig,
     },
     {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-148113122-1",
+      },
+    },
+    {
       resolve: `gatsby-plugin-favicon`,
       options: {
         logo: "./src/favicon.png",
