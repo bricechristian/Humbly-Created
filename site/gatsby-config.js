@@ -37,9 +37,14 @@ module.exports = {
       options: contentfulConfig,
     },
     {
-      resolve: `gatsby-plugin-google-analytics`,
+      resolve: `gatsby-plugin-gtag`,
       options: {
-        trackingId: "UA-148113122-1",
+        // your google analytics tracking id
+        trackingId: `UA-148113122-1`,
+        // Puts tracking script in the head instead of the body
+        head: false,
+        // enable ip anonymization
+        anonymize: true,
       },
     },
     {
