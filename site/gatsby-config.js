@@ -24,7 +24,7 @@ module.exports = {
     title: 'Humbly Created Co. | Charleston Wedding Videography',
     titleTemplate: "%s | Humbly Created Co.",
     description: "Humbly Created Co. is a Charleston wedding videography group specializing in making moments last a lifetime.",
-    url: "https://inspiring-swanson-769324.netlify.com", // No trailing slash allowed!
+    siteUrl: "https://humblycreatedco.com", // No trailing slash allowed!
     image: "/og-image.jpg", // Path to your image you placed in the 'static' folder
   },
   pathPrefix: '/gatsby-contentful-starter',
@@ -32,6 +32,7 @@ module.exports = {
     'gatsby-plugin-transition-link',
     'gatsby-transformer-remark',
     'gatsby-plugin-react-helmet',
+    `gatsby-plugin-advanced-sitemap`,
     {
       resolve: 'gatsby-source-contentful',
       options: contentfulConfig,
