@@ -37,8 +37,16 @@
     padding-right: 10%;
 }
 
+#about .me .text h2 {
+    font-size: .9rem;
+    text-transform: uppercase;
+    letter-spacing: .15em;
+}
+
 #about .me .text .inner p {
-    font-size: 41px;
+    /* font-size: 41px; */
+    /* font-size: 26px; */
+    /* line-height: 1.4; */
 }
 
 #about .me .text .inner p.name {
@@ -126,7 +134,15 @@
     }
 
     #about .me .text .inner p {
-        font-size: 3vw;
+        /* font-size: 3vw; */
+    }
+
+    #about .pricing h2 {
+        font-size: 2.5rem;
+    }
+
+    #about .me .wrapper {
+        align-items: flex-start;
     }
 
 }
@@ -165,9 +181,9 @@
         padding-top: 10%;
     }
 
-    #about .me .text .inner p {
+    /* #about .me .text .inner p {
         font-size: 5vw;
-    }
+    } */
 
     #about .me .image .inner {
         padding: 10%;
@@ -187,7 +203,7 @@
     }
 
     #about .pricing h2 {
-        font-size: 7vw;
+        /* font-size: 7vw; */
         padding-bottom: 0;
     }
 
@@ -202,12 +218,16 @@
 
 @media screen and (max-width: 600px) {
     #about .me .text .inner p {
-        font-size: 24px;
+        font-size: 16px;
     }
 
 
     #about .me .text .inner p.name {
         font-size: 14px;
+    }
+
+    #about .pricing h2 {
+        font-size: 6vw;
     }
 }
 

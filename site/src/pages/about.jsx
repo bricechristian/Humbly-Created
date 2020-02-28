@@ -34,12 +34,35 @@ class AboutIndex extends React.Component {
                     ad omnis, recusandae similique sunt cum minima impedit dolorem
                     molestiae voluptas provident?
                     </p> */}
+                  <h2 className="shadow">Random Tidbits</h2>
                   <p>
-                    When not capturing beautiful moments, you'll probably find
-                    me tucked behind a computer coding, grabbing a bite with the
-                    wifey or being dog-piled on by one of my three kids.
+                    Hey! I'm Brice. I'm a wedding filmmaker based here in
+                    Charleston, South Carolina. A few things that are near and
+                    dear to me: My relationship with Jesus, my wife, my three
+                    kids and trying to film any and everything. When not
+                    capturing beautiful moments, you'll probably find me tucked
+                    behind a computer coding something together, grabbing a bite
+                    with the wifey or being dog-piled on by one of my three
+                    kids.
                   </p>
-                  <p className={`name`}>Brice Christian, Founder</p>
+                  <h2 class="shadow">Wedding Filmmaking Approach</h2>
+                  <p>
+                    My approach to filming a wedding is to deliver to a bride
+                    and groom the most full, all encompassing recap of the
+                    biggest and best moments of their day in a clear, cinematic
+                    fashion. I love being able to partner with couples for their
+                    entire day and capture everything from the moment they get
+                    to their suite, to the moment they depart for their
+                    honeymoon. So after that 10-12 hour day, we're basically
+                    going to be family. And that's exactly what I consider the
+                    couples I get to work with and the vendors who are also
+                    involved. At the end of the day, my desire is to deliver
+                    about a 6-8 minute video that completely draws you in with
+                    the use of visuals through cameras and drones and with audio
+                    to completely immerse you in a one of a kind experience.
+                    Wedding Video pricing begins at $1750 locally.
+                  </p>
+                  {/* <p className={`name`}>Brice Christian, Founder</p> */}
                 </div>
               </div>
               <div className={`image`}>
@@ -52,11 +75,19 @@ class AboutIndex extends React.Component {
             </div>
           </div>
           <div className={`section pricing`}>
-            <div className={`wrapper lg `}>
+            <div className={`wrapper md `}>
               <h2 className={`blue-color center-text`}>
-                Pick your <span className={`shadow`}>package</span>
+                Feel free to reach out to me at{' '}
+                <span className={`shadow`}>
+                  <a
+                    href="mailto:humblycreatedco@gmail.com"
+                    style={{ textDecoration: 'none' }}
+                  >
+                    humblycreatedco@gmail.com
+                  </a>
+                </span>
               </h2>
-              <table
+              {/* <table
                 border="0"
                 cellPadding="0"
                 cellSpacing="0"
@@ -581,7 +612,7 @@ class AboutIndex extends React.Component {
                     </td>
                   </tr>
                 </tbody>
-              </table>
+              </table> */}
             </div>
           </div>
           <Footer />
