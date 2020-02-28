@@ -34,7 +34,7 @@ class AboutIndex extends React.Component {
                     ad omnis, recusandae similique sunt cum minima impedit dolorem
                     molestiae voluptas provident?
                     </p> */}
-                  <h2 className="shadow">Random Tidbits</h2>
+                  <h2 className="shadow">A little bit about me</h2>
                   <p>
                     Hey! I'm Brice. I'm a wedding filmmaker based here in
                     Charleston, South Carolina. A few things that are near and
@@ -59,8 +59,15 @@ class AboutIndex extends React.Component {
                     involved. At the end of the day, my desire is to deliver
                     about a 6-8 minute video that completely draws you in with
                     the use of visuals through cameras and drones and with audio
-                    to completely immerse you in a one of a kind experience.
-                    Wedding Video pricing begins at $1750 locally.
+                    to completely immerse you in a one of a kind experience.{' '}
+                    <span
+                      style={{
+                        paddingBottom: '2px',
+                        borderBottom: '2px solid',
+                      }}
+                    >
+                      Wedding video pricing begins at $1750 locally.
+                    </span>
                   </p>
                   {/* <p className={`name`}>Brice Christian, Founder</p> */}
                 </div>
