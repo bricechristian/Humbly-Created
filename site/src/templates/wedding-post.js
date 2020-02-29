@@ -120,37 +120,41 @@ class WeddingPostTemplate extends React.Component {
                   {currentPost.date}
                 </div>
               </div>
-              <div className={`photography flex blue-color text-left`}>
-                <div className={`photographer`}>
-                  <p> Photography By: </p>
-                  <a
-                    href={currentPost.photographer_website}
-                    className={`hk-bold-font shadow`}
-                    target="_blank"
-                  >
-                    {currentPost.photographer_name}
-                  </a>
+              {currentPost.photographer_name &
+              (
+                <div className={`photography flex blue-color text-left`}>
+                  <div className={`photographer`}>
+                    <p> Photography By: </p>
+                    <a
+                      href={currentPost.photographer_website}
+                      className={`hk-bold-font shadow`}
+                      target="_blank"
+                    >
+                      {currentPost.photographer_name}
+                    </a>
+                  </div>
+                  {}
+                  <div className={`slider`}>
+                    <Slider {...settings}>
+                      <div>
+                        <img src={`/${currentPost.slug}-1.jpg`} />
+                      </div>
+                      <div>
+                        <img src={`/${currentPost.slug}-2.jpg`} />
+                      </div>
+                      <div>
+                        <img src={`/${currentPost.slug}-3.jpg`} />
+                      </div>
+                      <div>
+                        <img src={`/${currentPost.slug}-4.jpg`} />
+                      </div>
+                      <div>
+                        <img src={`/${currentPost.slug}-5.jpg`} />
+                      </div>
+                    </Slider>
+                  </div>
                 </div>
-                <div className={`slider`}>
-                  <Slider {...settings}>
-                    <div>
-                      <img src={`/${currentPost.slug}-1.jpg`} />
-                    </div>
-                    <div>
-                      <img src={`/${currentPost.slug}-2.jpg`} />
-                    </div>
-                    <div>
-                      <img src={`/${currentPost.slug}-3.jpg`} />
-                    </div>
-                    <div>
-                      <img src={`/${currentPost.slug}-4.jpg`} />
-                    </div>
-                    <div>
-                      <img src={`/${currentPost.slug}-5.jpg`} />
-                    </div>
-                  </Slider>
-                </div>
-              </div>
+              )}
             </div>
           </div>
           <Footer />
