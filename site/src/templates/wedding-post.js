@@ -120,8 +120,7 @@ class WeddingPostTemplate extends React.Component {
                   {currentPost.date}
                 </div>
               </div>
-              {currentPost.photographer_name &
-              (
+              {currentPost.photographer_name && (
                 <div className={`photography flex blue-color text-left`}>
                   <div className={`photographer`}>
                     <p> Photography By: </p>
