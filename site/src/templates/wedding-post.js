@@ -132,8 +132,7 @@ class WeddingPostTemplate extends React.Component {
                       {currentPost.photographer_name}
                     </a>
                   </div>
-                  {}
-                  <div className={`slider`}>
+                  {/* <div className={`slider`}>
                     <Slider {...settings}>
                       <div>
                         <img src={`/${currentPost.slug}-1.jpg`} />
@@ -151,7 +150,7 @@ class WeddingPostTemplate extends React.Component {
                         <img src={`/${currentPost.slug}-5.jpg`} />
                       </div>
                     </Slider>
-                  </div>
+                  </div> */}
                 </div>
               )}
             </div>
